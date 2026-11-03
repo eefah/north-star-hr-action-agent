@@ -38,6 +38,9 @@ class Hit:
     bm25_rank: int | None = None
     rrf_score: float = 0.0
     rerank_score: float | None = None
+    passed_threshold: bool = False
+    sent: bool = False  # passed to the LLM
+    reason: str = ""  # why it was sent or excluded, for the trace
 
 
 @dataclass
@@ -46,6 +49,56 @@ class RetrievalResult:
     filter: dict
     hits: list[Hit]  # final chunks for the prompt, best first
     candidates: list[Hit] = field(default_factory=list)  # every fused candidate, for the trace
+    min_rerank_score: float = config.MIN_RERANK_SCORE
+    final_k: int = config.FINAL_K
+    outcome: str = ""  # see OUTCOMES
+
+
+# Why retrieval did or did not produce evidence. Internal only: the user always sees the same refusal,
+# so a refusal never reveals whether a restricted document exists.
+OUTCOMES = {
+    "evidence": "at least one chunk passed to the LLM",
+    "no_candidates": "neither dense nor BM25 found anything in the documents this user may see",
+    "below_threshold": "candidates found, but the reranker scored them all below the threshold",
+    "check_retrieval": "below threshold, but dense and BM25 both ranked one chunk 1st: "
+                       "possibly a reranker miss (as in Q40) rather than missing information",
+}
+
+
+def select(candidates: list[Hit], final_k: int, min_rerank_score: float,
+           rescue_rank: int = config.RESCUE_FIRST_STAGE_RANK) -> tuple[list[Hit], str]:
+    """Pick the chunks for the prompt: at most final_k, best reranker score first, none below the threshold.
+
+    final_k is a ceiling, not a target. Marks every candidate with passed_threshold, sent and a reason.
+    Returns the chosen chunks and an outcome key from OUTCOMES.
+    """
+    ranked = sorted(candidates, key=lambda h: h.rerank_score, reverse=True)
+    eligible = []
+    for h in ranked:
+        h.passed_threshold = h.rerank_score >= min_rerank_score
+        h.sent = False
+        rescued = (not h.passed_threshold and rescue_rank > 0 and h.dense_rank is not None
+                   and h.bm25_rank is not None and max(h.dense_rank, h.bm25_rank) <= rescue_rank)
+        if h.passed_threshold or rescued:
+            eligible.append(h)
+        h.reason = f"rescued: dense {h.dense_rank} and BM25 {h.bm25_rank}" if rescued else \
+            "" if h.passed_threshold else f"excluded: rerank below {min_rerank_score}"
+    for i, h in enumerate(eligible):
+        h.sent = i < final_k
+        if h.sent:
+            h.reason = f"sent: {i + 1} of max {final_k}" + (f" ({h.reason})" if h.reason else f", rerank >= {min_rerank_score}")
+        else:
+            h.reason = f"excluded: eligible but beyond the {final_k}-chunk cap"
+    final = eligible[:final_k]
+    if final:
+        outcome = "evidence"
+    elif not candidates:
+        outcome = "no_candidates"
+    elif any(h.dense_rank == 1 and h.bm25_rank == 1 for h in candidates):
+        outcome = "check_retrieval"
+    else:
+        outcome = "below_threshold"
+    return final, outcome
 
 
 class HybridRetriever:
@@ -104,7 +157,8 @@ class HybridRetriever:
 
     def search(self, query: str, roles: list[str], as_of: date | None = None, include_expired: bool = False,
                candidates_k: int = config.CANDIDATES_K, final_k: int = config.FINAL_K,
-               min_rerank_score: float = config.MIN_RERANK_SCORE) -> RetrievalResult:
+               min_rerank_score: float = config.MIN_RERANK_SCORE,
+               rescue_rank: int = config.RESCUE_FIRST_STAGE_RANK) -> RetrievalResult:
         flt = self.build_filter(roles, as_of or date.today(), include_expired)
 
         # Stage 1: wide net for recall. Fuse the two rankings with Reciprocal Rank Fusion.
@@ -115,12 +169,14 @@ class HybridRetriever:
                 chunk = self.by_id.get(cid)
                 if chunk is None:  # in Pinecone but not in chunks.jsonl: re-run ingest.py
                     continue
+                if not self.matches(chunk, flt):  # defence in depth: never trust the remote filter alone
+                    continue
                 hit = hits.setdefault(cid, Hit(cid, chunk[config.TEXT_FIELD], chunk))
                 setattr(hit, source, rank)
                 hit.rrf_score += 1 / (config.RRF_K + rank)
         candidates = sorted(hits.values(), key=lambda h: h.rrf_score, reverse=True)[:candidates_k]
         if not candidates:
-            return RetrievalResult(query, flt, [], [])
+            return RetrievalResult(query, flt, [], [], min_rerank_score, final_k, "no_candidates")
 
         # Stage 2: cross-encoder rerank for precision; drop anything the reranker thinks is irrelevant.
         ranked = self.inference.rerank(model=config.RERANK_MODEL, query=query,
@@ -128,8 +184,8 @@ class HybridRetriever:
         for r in ranked.data:
             candidates[r.index].rerank_score = r.score
         candidates.sort(key=lambda h: h.rerank_score, reverse=True)
-        final = [h for h in candidates[:final_k] if h.rerank_score >= min_rerank_score]
-        return RetrievalResult(query, flt, final, candidates)
+        final, outcome = select(candidates, final_k, min_rerank_score, rescue_rank)
+        return RetrievalResult(query, flt, final, candidates, min_rerank_score, final_k, outcome)
 
 
 def main():
@@ -141,12 +197,13 @@ def main():
     args = parser.parse_args()
 
     result = HybridRetriever().search(args.query, args.roles.split(","), args.as_of, args.include_expired)
-    print(f"{'chunk':<48} {'dense':>5} {'bm25':>5} {'rrf':>7} {'rerank':>7}")
-    final_ids = {h.id for h in result.hits}
+    print(f"query: {result.query}\nthreshold: {result.min_rerank_score} · max chunks: {result.final_k} · "
+          f"outcome: {result.outcome} ({OUTCOMES[result.outcome]})\n")
+    print(f"{'chunk':<48} {'dense':>5} {'bm25':>5} {'rrf':>7} {'rerank':>7} {'pass':>4}  reason")
     for h in result.candidates:
-        mark = "*" if h.id in final_ids else " "
+        mark = "*" if h.sent else " "
         print(f"{mark}{h.id:<47} {h.dense_rank or '-':>5} {h.bm25_rank or '-':>5} "
-              f"{h.rrf_score:>7.4f} {h.rerank_score:>7.3f}")
+              f"{h.rrf_score:>7.4f} {h.rerank_score:>7.3f} {'yes' if h.passed_threshold else 'no':>4}  {h.reason}")
     print(f"\n* = passed to the LLM ({len(result.hits)} chunks)")
 
 

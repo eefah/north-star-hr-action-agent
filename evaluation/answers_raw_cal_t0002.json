@@ -1,0 +1,2010 @@
+{
+ "Q01": {
+  "id": "Q01",
+  "answer": "A full‑time permanent UK employee is entitled to **25 days of paid annual leave per calendar year**, in addition to the England and Wales bank holidays [annual_leave#eligibility].",
+  "citations": [
+   "annual_leave#eligibility"
+  ],
+  "invalid_citations": [],
+  "hits": [
+   {
+    "id": "annual_leave#eligibility",
+    "source_uri": "data/annual_leave.md",
+    "rerank": 0.9965166
+   },
+   {
+    "id": "sickness_absence#company-sick-pay",
+    "source_uri": "data/sickness_absence.md",
+    "rerank": 0.2649285
+   },
+   {
+    "id": "parental_leave#scope-and-eligibility",
+    "source_uri": "data/parental_leave.md",
+    "rerank": 0.208018
+   },
+   {
+    "id": "annual_leave#carry-over",
+    "source_uri": "data/annual_leave.md",
+    "rerank": 0.026405517
+   },
+   {
+    "id": "annual_leave#how-to-request",
+    "source_uri": "data/annual_leave.md",
+    "rerank": 0.021574067
+   }
+  ],
+  "context": "<excerpt id=\"annual_leave#eligibility\" document=\"Annual leave\" doc_id=\"NS-ANNUAL-LEAVE\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nAnnual leave > Eligibility\n\nPermanent UK employees receive 25 days of paid annual leave per calendar year, plus England and Wales bank holidays. Part-time entitlement is pro-rated by contracted weekly hours. Contractors are outside this policy. The leave year runs from 1 January to 31 December.\n</excerpt>\n\n<excerpt id=\"sickness_absence#company-sick-pay\" document=\"Sickness absence\" doc_id=\"NS-SICKNESS-ABSENCE\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nSickness absence > Company sick pay\n\nPermanent UK employees who have passed probation receive up to 10 working days of company sick pay at full base pay per calendar year. Employees still on probation should ask the People team about their pay arrangements. Statutory sick pay eligibility, rates and interaction with company pay are not specified here.\n</excerpt>\n\n<excerpt id=\"parental_leave#scope-and-eligibility\" document=\"Enhanced parental leave\" doc_id=\"NS-PARENTAL-LEAVE\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nEnhanced parental leave > Scope and eligibility\n\nThis policy describes fictional enhanced company benefits for permanent UK employees with at least 26 weeks of continuous service by the expected week of birth or placement. Contractors are outside this policy. It does not provide a complete statement of statutory entitlements; ask the People team about statutory rights or eligibility outside this enhancement.\n</excerpt>\n\n<excerpt id=\"annual_leave#carry-over\" document=\"Annual leave\" doc_id=\"NS-ANNUAL-LEAVE\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nAnnual leave > Carry-over\n\nUp to 5 unused days may be carried into the next calendar year with line-manager approval recorded by 15 December. Carried days must be used by 31 March. This demo policy does not describe statutory exceptions or individual contractual arrangements; refer those questions to the People team.\n</excerpt>\n\n<excerpt id=\"annual_leave#how-to-request\" document=\"Annual leave\" doc_id=\"NS-ANNUAL-LEAVE\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nAnnual leave > How to request\n\nSubmit requests in PeopleHub at least 10 working days before the first day of leave. Your line manager approves or declines within 3 working days. Do not treat a submitted request as approved. Requests for more than 10 consecutive working days also need approval from Priya Shah, Head of People.\n</excerpt>",
+  "latency_s": {
+   "retrieval": 5.37,
+   "generation": 0.59
+  },
+  "model": "openai/gpt-oss-120b",
+  "outcome": "evidence",
+  "judge": {
+   "answer_score": 2,
+   "citation_score": 2,
+   "faithful": true,
+   "unsupported_claims": [],
+   "failure_type": "none",
+   "rationale": "The answer correctly states the 25 days plus bank holidays as per the reference and is fully supported by the provided excerpt."
+  }
+ },
+ "Q02": {
+  "id": "Q02",
+  "answer": "No. The policy allows only up to 5 unused holiday days to be carried into the next calendar year, even with manager approval [annual_leave#carry-over].",
+  "citations": [
+   "annual_leave#carry-over"
+  ],
+  "invalid_citations": [],
+  "hits": [
+   {
+    "id": "annual_leave#carry-over",
+    "source_uri": "data/annual_leave.md",
+    "rerank": 0.9667888
+   },
+   {
+    "id": "annual_leave#eligibility",
+    "source_uri": "data/annual_leave.md",
+    "rerank": 0.0026419468
+   }
+  ],
+  "context": "<excerpt id=\"annual_leave#carry-over\" document=\"Annual leave\" doc_id=\"NS-ANNUAL-LEAVE\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nAnnual leave > Carry-over\n\nUp to 5 unused days may be carried into the next calendar year with line-manager approval recorded by 15 December. Carried days must be used by 31 March. This demo policy does not describe statutory exceptions or individual contractual arrangements; refer those questions to the People team.\n</excerpt>\n\n<excerpt id=\"annual_leave#eligibility\" document=\"Annual leave\" doc_id=\"NS-ANNUAL-LEAVE\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nAnnual leave > Eligibility\n\nPermanent UK employees receive 25 days of paid annual leave per calendar year, plus England and Wales bank holidays. Part-time entitlement is pro-rated by contracted weekly hours. Contractors are outside this policy. The leave year runs from 1 January to 31 December.\n</excerpt>",
+  "latency_s": {
+   "retrieval": 1.73,
+   "generation": 0.92
+  },
+  "model": "openai/gpt-oss-120b",
+  "outcome": "evidence",
+  "judge": {
+   "answer_score": 1,
+   "citation_score": 2,
+   "faithful": true,
+   "unsupported_claims": [],
+   "failure_type": "generation",
+   "rationale": "The answer correctly identifies the 5-day limit and cites the correct excerpt, but it is incomplete because it omits the required approval deadline (15 December) and usage deadline (31 March) found in the same excerpt."
+  }
+ },
+ "Q03": {
+  "id": "Q03",
+  "answer": "No – the policy does not allow you to work remotely from Spain, even for a short holiday week. Remote work is permitted only from your registered UK home address or another UK location that your line manager has approved in writing; working overseas is expressly prohibited [remote_work#location-and-availability].",
+  "citations": [
+   "remote_work#location-and-availability"
+  ],
+  "invalid_citations": [],
+  "hits": [
+   {
+    "id": "remote_work#location-and-availability",
+    "source_uri": "data/remote_work.md",
+    "rerank": 0.012970387
+   },
+   {
+    "id": "parental_leave#support-and-return",
+    "source_uri": "data/parental_leave.md",
+    "rerank": 0.0059571536
+   },
+   {
+    "id": "remote_work#eligibility",
+    "source_uri": "data/remote_work.md",
+    "rerank": 0.0031480708
+   }
+  ],
+  "context": "<excerpt id=\"remote_work#location-and-availability\" document=\"Remote and hybrid working\" doc_id=\"NS-REMOTE-WORK\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nRemote and hybrid working > Location and availability\n\nWork remotely only from your registered UK home address or another UK location approved in writing by your line manager. Working overseas is not permitted under this policy, including during a holiday. Be available between 10:00 and 15:00 on working days, excluding your agreed lunch break.\n</excerpt>\n\n<excerpt id=\"parental_leave#support-and-return\" document=\"Enhanced parental leave\" doc_id=\"NS-PARENTAL-LEAVE\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nEnhanced parental leave > Support and return\n\nContact Priya Shah at people@northstar-demo.example for confidential planning. Discuss your return arrangements at least 4 weeks before returning. Requests for hybrid working are assessed under the remote working policy; parental leave approval does not automatically approve a remote working pattern.\n</excerpt>\n\n<excerpt id=\"remote_work#eligibility\" document=\"Remote and hybrid working\" doc_id=\"NS-REMOTE-WORK\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nRemote and hybrid working > Eligibility\n\nPermanent UK employees whose roles can be performed remotely may request hybrid working after completing their first 4 weeks. Hybrid arrangements require written line-manager approval. Contractors must use their engagement agreement; this policy does not grant them hybrid eligibility.\n</excerpt>",
+  "latency_s": {
+   "retrieval": 1.11,
+   "generation": 0.95
+  },
+  "model": "openai/gpt-oss-120b",
+  "outcome": "evidence",
+  "judge": {
+   "answer_score": 2,
+   "citation_score": 2,
+   "faithful": true,
+   "unsupported_claims": [],
+   "failure_type": "none",
+   "rationale": "The assistant correctly states that working remotely from Spain is not permitted, citing the relevant excerpt that explicitly prohibits overseas work, including during holidays."
+  }
+ },
+ "Q04": {
+  "id": "Q04",
+  "answer": "No – the policy does not allow reimbursement for normal home‑to‑office commuting, even on the office days required by your hybrid arrangement. The travel‑and‑meals policy states that “Normal home‑to‑office commuting is not reimbursed, including the office days required by the remote working policy”[expenses#travel-and-meals].",
+  "citations": [
+   "expenses#travel-and-meals"
+  ],
+  "invalid_citations": [],
+  "hits": [
+   {
+    "id": "expenses#travel-and-meals",
+    "source_uri": "data/expenses.md",
+    "rerank": 0.091544405
+   },
+   {
+    "id": "remote_work#office-attendance",
+    "source_uri": "data/remote_work.md",
+    "rerank": 0.026405517
+   },
+   {
+    "id": "remote_work#equipment-and-expenses",
+    "source_uri": "data/remote_work.md",
+    "rerank": 0.00305151
+   },
+   {
+    "id": "remote_work#eligibility",
+    "source_uri": "data/remote_work.md",
+    "rerank": 0.0022694687
+   }
+  ],
+  "context": "<excerpt id=\"expenses#travel-and-meals\" document=\"Business expenses\" doc_id=\"NS-EXPENSES\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nBusiness expenses > Travel and meals\n\nBook standard-class rail travel. A business-trip evening meal may be claimed up to £30 per person, including service charges. Alcohol is not reimbursed. Normal home-to-office commuting is not reimbursed, including the office days required by the remote working policy. Taxis require advance line-manager approval unless there is an immediate safety concern; explain any exception in the claim.\n</excerpt>\n\n<excerpt id=\"remote_work#office-attendance\" document=\"Remote and hybrid working\" doc_id=\"NS-REMOTE-WORK\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nRemote and hybrid working > Office attendance\n\nThe standard arrangement is at least 2 office days per working week, agreed with your line manager. Employees working fewer than 5 days per week agree an attendance pattern individually; this policy gives no automatic pro-rata formula. Team meetings may require attendance on a specified day.\n</excerpt>\n\n<excerpt id=\"remote_work#equipment-and-expenses\" document=\"Remote and hybrid working\" doc_id=\"NS-REMOTE-WORK\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nRemote and hybrid working > Equipment and expenses\n\nIT supplies a managed laptop and one headset. The annual home-office allowance is up to £150 per calendar year for an approved chair, keyboard or monitor. Obtain written line-manager approval before purchase and submit the claim under the expenses policy. Internet subscriptions, electricity and personal phone contracts are not reimbursed.\n</excerpt>\n\n<excerpt id=\"remote_work#eligibility\" document=\"Remote and hybrid working\" doc_id=\"NS-REMOTE-WORK\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nRemote and hybrid working > Eligibility\n\nPermanent UK employees whose roles can be performed remotely may request hybrid working after completing their first 4 weeks. Hybrid arrangements require written line-manager approval. Contractors must use their engagement agreement; this policy does not grant them hybrid eligibility.\n</excerpt>",
+  "latency_s": {
+   "retrieval": 1.42,
+   "generation": 1.64
+  },
+  "model": "openai/gpt-oss-120b",
+  "outcome": "evidence",
+  "judge": {
+   "answer_score": 2,
+   "citation_score": 2,
+   "faithful": true,
+   "unsupported_claims": [],
+   "failure_type": "none",
+   "rationale": "The assistant correctly answered 'No' and cited the specific excerpt stating that normal commuting, including required hybrid office days, is not reimbursed. The answer is complete, grounded, and matches the reference."
+  }
+ },
+ "Q05": {
+  "id": "Q05",
+  "answer": "You must first get written approval from your line‑manager, then submit the purchase as a home‑office expense through SpendTrack within 30 days, attaching an itemised receipt and stating the business purpose.\n\n**Steps**\n\n1. Verify the monitor is covered by the home‑office allowance (up to £150 per year) [remote_work#equipment-and-expenses].\n2. Obtain written approval from your line‑manager before buying the monitor [remote_work#equipment-and-expenses].\n3. Purchase the monitor (price £140 is within the £150 annual limit) [remote_work#equipment-and-expenses].\n4. Within 30 calendar days, log the claim in SpendTrack [expenses#eligibility-and-submission].\n5. Attach an itemised receipt and note the business purpose (home working) [expenses#eligibility-and-submission].\n6. If the receipt is missing, you would need written Finance approval before submission [expenses#eligibility-and-submission].",
+  "citations": [
+   "remote_work#equipment-and-expenses",
+   "expenses#eligibility-and-submission"
+  ],
+  "invalid_citations": [],
+  "hits": [
+   {
+    "id": "remote_work#equipment-and-expenses",
+    "source_uri": "data/remote_work.md",
+    "rerank": 0.31689754
+   },
+   {
+    "id": "expenses#home-office-purchases",
+    "source_uri": "data/expenses.md",
+    "rerank": 0.07172112
+   },
+   {
+    "id": "expenses#eligibility-and-submission",
+    "source_uri": "data/expenses.md",
+    "rerank": 0.004736749
+   }
+  ],
+  "context": "<excerpt id=\"remote_work#equipment-and-expenses\" document=\"Remote and hybrid working\" doc_id=\"NS-REMOTE-WORK\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nRemote and hybrid working > Equipment and expenses\n\nIT supplies a managed laptop and one headset. The annual home-office allowance is up to £150 per calendar year for an approved chair, keyboard or monitor. Obtain written line-manager approval before purchase and submit the claim under the expenses policy. Internet subscriptions, electricity and personal phone contracts are not reimbursed.\n</excerpt>\n\n<excerpt id=\"expenses#home-office-purchases\" document=\"Business expenses\" doc_id=\"NS-EXPENSES\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nBusiness expenses > Home-office purchases\n\nApply the eligibility, approval and £150 annual limit in the remote working policy before submitting a home-office claim. The £30 meal limit does not apply to home-office equipment. Purchases without the required advance approval are referred to Finance for review; payment is not guaranteed.\n</excerpt>\n\n<excerpt id=\"expenses#eligibility-and-submission\" document=\"Business expenses\" doc_id=\"NS-EXPENSES\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nBusiness expenses > Eligibility and submission\n\nEmployees may claim reasonable, necessary business expenses through SpendTrack. Submit claims within 30 calendar days of the purchase date. Attach an itemised receipt and state the business purpose. A missing receipt requires written approval from Finance before submission; a bank statement alone is not an itemised receipt.\n</excerpt>",
+  "latency_s": {
+   "retrieval": 0.82,
+   "generation": 1.84
+  },
+  "model": "openai/gpt-oss-120b",
+  "outcome": "evidence",
+  "judge": {
+   "answer_score": 2,
+   "citation_score": 2,
+   "faithful": true,
+   "unsupported_claims": [],
+   "failure_type": "none",
+   "rationale": "The answer correctly identifies the required steps (approval, SpendTrack submission within 30 days, receipt, purpose) and accurately notes the £150 limit, all supported by the provided excerpts."
+  }
+ },
+ "Q06": {
+  "id": "Q06",
+  "answer": "The current policy sets the claim deadline at 30 calendar days after the purchase and limits a business‑trip evening meal to £30 per person (including service charges)[expenses#eligibility-and-submission][expenses#travel-and-meals]. The figures you mentioned (60 days and £40) are not reflected in the HR policies.",
+  "citations": [
+   "expenses#eligibility-and-submission",
+   "expenses#travel-and-meals"
+  ],
+  "invalid_citations": [],
+  "hits": [
+   {
+    "id": "expenses#travel-and-meals",
+    "source_uri": "data/expenses.md",
+    "rerank": 0.057599206
+   },
+   {
+    "id": "expenses#home-office-purchases",
+    "source_uri": "data/expenses.md",
+    "rerank": 0.009936418
+   },
+   {
+    "id": "expenses#eligibility-and-submission",
+    "source_uri": "data/expenses.md",
+    "rerank": 0.0029121784
+   }
+  ],
+  "context": "<excerpt id=\"expenses#travel-and-meals\" document=\"Business expenses\" doc_id=\"NS-EXPENSES\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nBusiness expenses > Travel and meals\n\nBook standard-class rail travel. A business-trip evening meal may be claimed up to £30 per person, including service charges. Alcohol is not reimbursed. Normal home-to-office commuting is not reimbursed, including the office days required by the remote working policy. Taxis require advance line-manager approval unless there is an immediate safety concern; explain any exception in the claim.\n</excerpt>\n\n<excerpt id=\"expenses#home-office-purchases\" document=\"Business expenses\" doc_id=\"NS-EXPENSES\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nBusiness expenses > Home-office purchases\n\nApply the eligibility, approval and £150 annual limit in the remote working policy before submitting a home-office claim. The £30 meal limit does not apply to home-office equipment. Purchases without the required advance approval are referred to Finance for review; payment is not guaranteed.\n</excerpt>\n\n<excerpt id=\"expenses#eligibility-and-submission\" document=\"Business expenses\" doc_id=\"NS-EXPENSES\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nBusiness expenses > Eligibility and submission\n\nEmployees may claim reasonable, necessary business expenses through SpendTrack. Submit claims within 30 calendar days of the purchase date. Attach an itemised receipt and state the business purpose. A missing receipt requires written approval from Finance before submission; a bank statement alone is not an itemised receipt.\n</excerpt>",
+  "latency_s": {
+   "retrieval": 1.4,
+   "generation": 1.06
+  },
+  "model": "openai/gpt-oss-120b",
+  "outcome": "evidence",
+  "judge": {
+   "answer_score": 2,
+   "citation_score": 2,
+   "faithful": true,
+   "unsupported_claims": [],
+   "failure_type": "none",
+   "rationale": "The assistant correctly identified the current policy values (30 days, £30) and explicitly corrected the user's outdated premise, citing the relevant excerpts for both facts."
+  }
+ },
+ "Q07": {
+  "id": "Q07",
+  "answer": "You are eligible for **4 weeks of enhanced partner leave at full base pay**[parental_leave#partner-benefit]. This applies because you are a permanent UK employee with at least 26 weeks of continuous service by the expected week of birth[parental_leave#scope-and-eligibility].",
+  "citations": [
+   "parental_leave#partner-benefit",
+   "parental_leave#scope-and-eligibility"
+  ],
+  "invalid_citations": [],
+  "hits": [
+   {
+    "id": "parental_leave#scope-and-eligibility",
+    "source_uri": "data/parental_leave.md",
+    "rerank": 0.9257686
+   },
+   {
+    "id": "parental_leave#partner-benefit",
+    "source_uri": "data/parental_leave.md",
+    "rerank": 0.6402986
+   },
+   {
+    "id": "annual_leave#eligibility",
+    "source_uri": "data/annual_leave.md",
+    "rerank": 0.16545822
+   },
+   {
+    "id": "parental_leave#primary-carer-benefit",
+    "source_uri": "data/parental_leave.md",
+    "rerank": 0.04352814
+   },
+   {
+    "id": "parental_leave#how-to-request",
+    "source_uri": "data/parental_leave.md",
+    "rerank": 0.018089995
+   }
+  ],
+  "context": "<excerpt id=\"parental_leave#scope-and-eligibility\" document=\"Enhanced parental leave\" doc_id=\"NS-PARENTAL-LEAVE\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nEnhanced parental leave > Scope and eligibility\n\nThis policy describes fictional enhanced company benefits for permanent UK employees with at least 26 weeks of continuous service by the expected week of birth or placement. Contractors are outside this policy. It does not provide a complete statement of statutory entitlements; ask the People team about statutory rights or eligibility outside this enhancement.\n</excerpt>\n\n<excerpt id=\"parental_leave#partner-benefit\" document=\"Enhanced parental leave\" doc_id=\"NS-PARENTAL-LEAVE\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nEnhanced parental leave > Partner benefit\n\nAn eligible partner may take 4 weeks at full base pay. Take the leave in one block within 6 months of birth or placement. Only one employee may use the primary carer benefit for the same child; the other may use the partner benefit if eligible.\n</excerpt>\n\n<excerpt id=\"annual_leave#eligibility\" document=\"Annual leave\" doc_id=\"NS-ANNUAL-LEAVE\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nAnnual leave > Eligibility\n\nPermanent UK employees receive 25 days of paid annual leave per calendar year, plus England and Wales bank holidays. Part-time entitlement is pro-rated by contracted weekly hours. Contractors are outside this policy. The leave year runs from 1 January to 31 December.\n</excerpt>\n\n<excerpt id=\"parental_leave#primary-carer-benefit\" document=\"Enhanced parental leave\" doc_id=\"NS-PARENTAL-LEAVE\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nEnhanced parental leave > Primary carer benefit\n\nAn eligible primary carer may take up to 26 weeks under this enhanced scheme: 12 weeks at full base pay followed by 14 weeks without company pay. Any statutory payment and interaction with this enhancement must be confirmed by the People team. This document does not specify statutory payment rates.\n</excerpt>\n\n<excerpt id=\"parental_leave#how-to-request\" document=\"Enhanced parental leave\" doc_id=\"NS-PARENTAL-LEAVE\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nEnhanced parental leave > How to request\n\nNotify the People team at least 15 weeks before the expected birth date, or within 7 calendar days of receiving adoption placement notification. Provide the expected date and proposed leave dates. The People team confirms eligibility and the pay schedule in writing.\n</excerpt>",
+  "latency_s": {
+   "retrieval": 1.83,
+   "generation": 0.68
+  },
+  "model": "openai/gpt-oss-120b",
+  "outcome": "evidence",
+  "judge": {
+   "answer_score": 1,
+   "citation_score": 2,
+   "faithful": true,
+   "unsupported_claims": [],
+   "failure_type": "generation",
+   "rationale": "The answer correctly identifies the 4 weeks at full base pay and eligibility but omits the critical condition that the leave must be taken in one block within 6 months of birth or placement, as well as the requirement to confirm eligibility with the People team."
+  }
+ },
+ "Q08": {
+  "id": "Q08",
+  "answer": "Which type of leave are you looking to take next week—annual leave, parental leave (partner or primary‑carer benefit), or another category? The answer depends on the specific leave policy that applies.",
+  "citations": [],
+  "invalid_citations": [],
+  "hits": [
+   {
+    "id": "parental_leave#partner-benefit",
+    "source_uri": "data/parental_leave.md",
+    "rerank": 0.028167473
+   },
+   {
+    "id": "annual_leave#eligibility",
+    "source_uri": "data/annual_leave.md",
+    "rerank": 0.016029147
+   },
+   {
+    "id": "annual_leave#carry-over",
+    "source_uri": "data/annual_leave.md",
+    "rerank": 0.010328152
+   },
+   {
+    "id": "parental_leave#primary-carer-benefit",
+    "source_uri": "data/parental_leave.md",
+    "rerank": 0.009125637
+   },
+   {
+    "id": "parental_leave#scope-and-eligibility",
+    "source_uri": "data/parental_leave.md",
+    "rerank": 0.0033897832
+   }
+  ],
+  "context": "<excerpt id=\"parental_leave#partner-benefit\" document=\"Enhanced parental leave\" doc_id=\"NS-PARENTAL-LEAVE\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nEnhanced parental leave > Partner benefit\n\nAn eligible partner may take 4 weeks at full base pay. Take the leave in one block within 6 months of birth or placement. Only one employee may use the primary carer benefit for the same child; the other may use the partner benefit if eligible.\n</excerpt>\n\n<excerpt id=\"annual_leave#eligibility\" document=\"Annual leave\" doc_id=\"NS-ANNUAL-LEAVE\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nAnnual leave > Eligibility\n\nPermanent UK employees receive 25 days of paid annual leave per calendar year, plus England and Wales bank holidays. Part-time entitlement is pro-rated by contracted weekly hours. Contractors are outside this policy. The leave year runs from 1 January to 31 December.\n</excerpt>\n\n<excerpt id=\"annual_leave#carry-over\" document=\"Annual leave\" doc_id=\"NS-ANNUAL-LEAVE\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nAnnual leave > Carry-over\n\nUp to 5 unused days may be carried into the next calendar year with line-manager approval recorded by 15 December. Carried days must be used by 31 March. This demo policy does not describe statutory exceptions or individual contractual arrangements; refer those questions to the People team.\n</excerpt>\n\n<excerpt id=\"parental_leave#primary-carer-benefit\" document=\"Enhanced parental leave\" doc_id=\"NS-PARENTAL-LEAVE\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nEnhanced parental leave > Primary carer benefit\n\nAn eligible primary carer may take up to 26 weeks under this enhanced scheme: 12 weeks at full base pay followed by 14 weeks without company pay. Any statutory payment and interaction with this enhancement must be confirmed by the People team. This document does not specify statutory payment rates.\n</excerpt>\n\n<excerpt id=\"parental_leave#scope-and-eligibility\" document=\"Enhanced parental leave\" doc_id=\"NS-PARENTAL-LEAVE\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nEnhanced parental leave > Scope and eligibility\n\nThis policy describes fictional enhanced company benefits for permanent UK employees with at least 26 weeks of continuous service by the expected week of birth or placement. Contractors are outside this policy. It does not provide a complete statement of statutory entitlements; ask the People team about statutory rights or eligibility outside this enhancement.\n</excerpt>",
+  "latency_s": {
+   "retrieval": 2.74,
+   "generation": 0.59
+  },
+  "model": "openai/gpt-oss-120b",
+  "outcome": "evidence",
+  "judge": {
+   "answer_score": 2,
+   "citation_score": null,
+   "faithful": true,
+   "unsupported_claims": [],
+   "failure_type": "none",
+   "rationale": "The assistant correctly identified the ambiguity in the user's request and asked a clarifying question about the type of leave, aligning with the reference answer's expectation to not assume the leave type."
+  }
+ },
+ "Q09": {
+  "id": "Q09",
+  "answer": "Notify your line manager by 10:00 on the first working day you are ill and follow the normal sickness‑reporting procedure; the People team will then review a request to reclassify the affected annual‑leave days, but reclassification is not automatic[annual_leave#illness-during-leave][sickness_absence#reporting].  \n\n**Steps**\n\n1. Call (or email if unavailable) your line manager by 10:00 on the first affected working day[sickness_absence#reporting].  \n2. Follow the standard sickness‑reporting policy (provide any required evidence).  \n3. The People team will review your request to reclassify the sick days back to annual leave[annual_leave#illness-during-leave].  \n\nIf you need further assistance, contact the People team at people@northstar-demo.example.",
+  "citations": [
+   "annual_leave#illness-during-leave",
+   "sickness_absence#reporting"
+  ],
+  "invalid_citations": [],
+  "hits": [
+   {
+    "id": "annual_leave#illness-during-leave",
+    "source_uri": "data/annual_leave.md",
+    "rerank": 0.99094474
+   },
+   {
+    "id": "sickness_absence#illness-on-holiday",
+    "source_uri": "data/sickness_absence.md",
+    "rerank": 0.9059898
+   },
+   {
+    "id": "sickness_absence#reporting",
+    "source_uri": "data/sickness_absence.md",
+    "rerank": 0.01374232
+   },
+   {
+    "id": "annual_leave#how-to-request",
+    "source_uri": "data/annual_leave.md",
+    "rerank": 0.01302049
+   },
+   {
+    "id": "annual_leave#carry-over",
+    "source_uri": "data/annual_leave.md",
+    "rerank": 0.00930395
+   }
+  ],
+  "context": "<excerpt id=\"annual_leave#illness-during-leave\" document=\"Annual leave\" doc_id=\"NS-ANNUAL-LEAVE\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nAnnual leave > Illness during leave\n\nIf you become ill during approved annual leave, notify your line manager by 10:00 on the first affected working day and follow the sickness reporting policy. The People team reviews requests to reclassify affected days. Reclassification is not automatic.\n</excerpt>\n\n<excerpt id=\"sickness_absence#illness-on-holiday\" document=\"Sickness absence\" doc_id=\"NS-SICKNESS-ABSENCE\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nSickness absence > Illness on holiday\n\nFor illness during approved annual leave, use the same first-day reporting deadline and evidence rules. The People team reviews reclassification of annual leave; see the annual leave policy. This document does not guarantee that every affected day will be restored.\n</excerpt>\n\n<excerpt id=\"sickness_absence#reporting\" document=\"Sickness absence\" doc_id=\"NS-SICKNESS-ABSENCE\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nSickness absence > Reporting\n\nIf you cannot work because of illness, telephone your line manager by 10:00 on the first affected working day. If they are unavailable, email people@northstar-demo.example by the same deadline. Tell them your likely absence duration if known; you do not need to disclose your diagnosis to colleagues.\n</excerpt>\n\n<excerpt id=\"annual_leave#how-to-request\" document=\"Annual leave\" doc_id=\"NS-ANNUAL-LEAVE\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nAnnual leave > How to request\n\nSubmit requests in PeopleHub at least 10 working days before the first day of leave. Your line manager approves or declines within 3 working days. Do not treat a submitted request as approved. Requests for more than 10 consecutive working days also need approval from Priya Shah, Head of People.\n</excerpt>\n\n<excerpt id=\"annual_leave#carry-over\" document=\"Annual leave\" doc_id=\"NS-ANNUAL-LEAVE\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nAnnual leave > Carry-over\n\nUp to 5 unused days may be carried into the next calendar year with line-manager approval recorded by 15 December. Carried days must be used by 31 March. This demo policy does not describe statutory exceptions or individual contractual arrangements; refer those questions to the People team.\n</excerpt>",
+  "latency_s": {
+   "retrieval": 1.93,
+   "generation": 0.82
+  },
+  "model": "openai/gpt-oss-120b",
+  "outcome": "evidence",
+  "judge": {
+   "answer_score": 1,
+   "citation_score": 2,
+   "faithful": true,
+   "unsupported_claims": [],
+   "failure_type": "generation",
+   "rationale": "The answer correctly covers the reporting deadline, the manager/email fallback, and the non-automatic reclassification review, but it omits the specific evidence rules (self-certification up to 7 days vs. fit note) required by the reference answer."
+  }
+ },
+ "Q10": {
+  "id": "Q10",
+  "answer": "No – the policy requires you to report a lost laptop within 1 hour of discovery and not wait until the next working day. Report it immediately to security@northstar-demo.example (or call extension 4400 if you cannot use email)[information_security#lost-devices-and-incidents].",
+  "citations": [
+   "information_security#lost-devices-and-incidents"
+  ],
+  "invalid_citations": [],
+  "hits": [
+   {
+    "id": "information_security#lost-devices-and-incidents",
+    "source_uri": "data/information_security.md",
+    "rerank": 0.82615143
+   }
+  ],
+  "context": "<excerpt id=\"information_security#lost-devices-and-incidents\" document=\"Information security\" doc_id=\"NS-INFORMATION-SECURITY\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nInformation security > Lost devices and incidents\n\nReport a lost laptop, suspected phishing, accidental disclosure or unauthorised access to security@northstar-demo.example within 1 hour of discovery. If you cannot use company email, call the fictional internal service desk on extension 4400. Do not wait until the next working day. The security team coordinates containment; do not attempt your own remote wipe.\n</excerpt>",
+  "latency_s": {
+   "retrieval": 1.2,
+   "generation": 0.75
+  },
+  "model": "openai/gpt-oss-120b",
+  "outcome": "evidence",
+  "judge": {
+   "answer_score": 2,
+   "citation_score": 2,
+   "faithful": true,
+   "unsupported_claims": [],
+   "failure_type": "none",
+   "rationale": "The assistant correctly identifies that the user cannot wait until tomorrow, citing the 1-hour reporting window and the specific contact methods (email or extension 4400) found in the excerpt. It also correctly advises against waiting, which aligns with the reference answer's core requirement."
+  }
+ },
+ "Q11": {
+  "id": "Q11",
+  "answer": "No. The approved Northstar Assist workspace may process internal company information, but you must not enter customer personal data, credentials or payment details into any generative‑AI tool, including Northstar Assist[information_security#use-of-ai-tools].",
+  "citations": [
+   "information_security#use-of-ai-tools"
+  ],
+  "invalid_citations": [],
+  "hits": [
+   {
+    "id": "information_security#use-of-ai-tools",
+    "source_uri": "data/information_security.md",
+    "rerank": 0.9929061
+   },
+   {
+    "id": "information_security#customer-data",
+    "source_uri": "data/information_security.md",
+    "rerank": 0.030675802
+   }
+  ],
+  "context": "<excerpt id=\"information_security#use-of-ai-tools\" document=\"Information security\" doc_id=\"NS-INFORMATION-SECURITY\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nInformation security > Use of AI tools\n\nOnly the approved Northstar Assist workspace may process internal company information. Do not enter customer personal data, credentials or payment details into any generative AI tool, including Northstar Assist. Public AI tools may be used only with public or synthetic information. This demo pack is synthetic.\n</excerpt>\n\n<excerpt id=\"information_security#customer-data\" document=\"Information security\" doc_id=\"NS-INFORMATION-SECURITY\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nInformation security > Customer data\n\nStore customer information only in approved company systems. Do not copy it to personal email, personal cloud storage or removable USB drives. Access is based on the minimum permissions required for your role. Questions about specific retention periods go to the security team; no retention schedule is included here.\n</excerpt>",
+  "latency_s": {
+   "retrieval": 1.83,
+   "generation": 0.72
+  },
+  "model": "openai/gpt-oss-120b",
+  "outcome": "evidence",
+  "judge": {
+   "answer_score": 2,
+   "citation_score": 2,
+   "faithful": true,
+   "unsupported_claims": [],
+   "failure_type": "none",
+   "rationale": "The answer correctly states that customer personal data and payment details are prohibited in Northstar Assist, matching the reference and the provided excerpt. The citation is accurate and supports the claim."
+  }
+ },
+ "Q12": {
+  "id": "Q12",
+  "answer": "No. Cash and gift cards must always be declined, no matter the amount, so you cannot accept the £25 gift card and you would not record it in the Gifts Register. [code_of_conduct#gifts-and-hospitality]",
+  "citations": [
+   "code_of_conduct#gifts-and-hospitality"
+  ],
+  "invalid_citations": [],
+  "hits": [
+   {
+    "id": "code_of_conduct#gifts-and-hospitality",
+    "source_uri": "data/code_of_conduct.md",
+    "rerank": 0.71552336
+   }
+  ],
+  "context": "<excerpt id=\"code_of_conduct#gifts-and-hospitality\" document=\"Code of conduct\" doc_id=\"NS-CODE-OF-CONDUCT\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nCode of conduct > Gifts and hospitality\n\nA non-cash gift or hospitality worth up to and including £50 may be accepted only if it cannot reasonably influence a business decision. Record it in the Gifts Register within 5 working days. Anything above £50 requires written approval from Compliance before acceptance. Cash and gift cards must always be declined, regardless of value.\n</excerpt>",
+  "latency_s": {
+   "retrieval": 2.67,
+   "generation": 0.71
+  },
+  "model": "openai/gpt-oss-120b",
+  "outcome": "evidence",
+  "judge": {
+   "answer_score": 2,
+   "citation_score": 2,
+   "faithful": true,
+   "unsupported_claims": [],
+   "failure_type": "none",
+   "rationale": "The assistant correctly identified that gift cards must always be declined regardless of value, aligning with the reference answer and the provided policy excerpt. The citation is accurate and supports the claim."
+  }
+ },
+ "Q13": {
+  "id": "Q13",
+  "answer": "No. Permanent UK employees can only request a hybrid working arrangement after they have completed their first 4 weeks of employment, and it requires written line‑manager approval [onboarding#first-month][remote_work#eligibility].\n\n**What you need to do**\n\n1. Continue working on‑site (or as otherwise arranged) until you finish week 4.  \n2. At the end of week 4, submit a hybrid‑working request to your line manager.  \n3. Obtain written approval before changing your office attendance pattern.  \n\nIf you have any further questions, contact the People team at people@northstar-demo.example.",
+  "citations": [
+   "onboarding#first-month",
+   "remote_work#eligibility"
+  ],
+  "invalid_citations": [],
+  "hits": [
+   {
+    "id": "onboarding#first-month",
+    "source_uri": "data/onboarding.md",
+    "rerank": 0.92956835
+   },
+   {
+    "id": "remote_work#eligibility",
+    "source_uri": "data/remote_work.md",
+    "rerank": 0.7403621
+   },
+   {
+    "id": "remote_work#office-attendance",
+    "source_uri": "data/remote_work.md",
+    "rerank": 0.03601607
+   },
+   {
+    "id": "parental_leave#support-and-return",
+    "source_uri": "data/parental_leave.md",
+    "rerank": 0.0058199596
+   }
+  ],
+  "context": "<excerpt id=\"onboarding#first-month\" document=\"New starter onboarding\" doc_id=\"NS-ONBOARDING\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nNew starter onboarding > First month\n\nYour line manager holds a check-in at the end of weeks 1, 2 and 4. Permanent UK employees may request hybrid working after their first 4 weeks, subject to role suitability and written line-manager approval under the remote working policy. The company home-office allowance is not an automatic joining bonus.\n</excerpt>\n\n<excerpt id=\"remote_work#eligibility\" document=\"Remote and hybrid working\" doc_id=\"NS-REMOTE-WORK\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nRemote and hybrid working > Eligibility\n\nPermanent UK employees whose roles can be performed remotely may request hybrid working after completing their first 4 weeks. Hybrid arrangements require written line-manager approval. Contractors must use their engagement agreement; this policy does not grant them hybrid eligibility.\n</excerpt>\n\n<excerpt id=\"remote_work#office-attendance\" document=\"Remote and hybrid working\" doc_id=\"NS-REMOTE-WORK\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nRemote and hybrid working > Office attendance\n\nThe standard arrangement is at least 2 office days per working week, agreed with your line manager. Employees working fewer than 5 days per week agree an attendance pattern individually; this policy gives no automatic pro-rata formula. Team meetings may require attendance on a specified day.\n</excerpt>\n\n<excerpt id=\"parental_leave#support-and-return\" document=\"Enhanced parental leave\" doc_id=\"NS-PARENTAL-LEAVE\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nEnhanced parental leave > Support and return\n\nContact Priya Shah at people@northstar-demo.example for confidential planning. Discuss your return arrangements at least 4 weeks before returning. Requests for hybrid working are assessed under the remote working policy; parental leave approval does not automatically approve a remote working pattern.\n</excerpt>",
+  "latency_s": {
+   "retrieval": 0.92,
+   "generation": 0.46
+  },
+  "model": "openai/gpt-oss-120b",
+  "outcome": "evidence",
+  "judge": {
+   "answer_score": 2,
+   "citation_score": 2,
+   "faithful": true,
+   "unsupported_claims": [],
+   "failure_type": "none",
+   "rationale": "The assistant correctly identifies that the user cannot start the hybrid arrangement in week two, citing the 4-week waiting period and approval requirement from the provided excerpts. The answer is complete, grounded, and appropriately cited."
+  }
+ },
+ "Q14": {
+  "id": "Q14",
+  "answer": "I’m sorry, but the HR policies don’t contain information about individual employees’ remaining annual‑leave balances. Please contact the People team at people@northstar-demo.example for that detail.",
+  "citations": [],
+  "invalid_citations": [],
+  "hits": [
+   {
+    "id": "annual_leave#eligibility",
+    "source_uri": "data/annual_leave.md",
+    "rerank": 0.51101506
+   },
+   {
+    "id": "annual_leave#carry-over",
+    "source_uri": "data/annual_leave.md",
+    "rerank": 0.056756895
+   },
+   {
+    "id": "annual_leave#how-to-request",
+    "source_uri": "data/annual_leave.md",
+    "rerank": 0.045522004
+   },
+   {
+    "id": "onboarding#first-week",
+    "source_uri": "data/onboarding.md",
+    "rerank": 0.008315778
+   },
+   {
+    "id": "sickness_absence#illness-on-holiday",
+    "source_uri": "data/sickness_absence.md",
+    "rerank": 0.003750789
+   }
+  ],
+  "context": "<excerpt id=\"annual_leave#eligibility\" document=\"Annual leave\" doc_id=\"NS-ANNUAL-LEAVE\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nAnnual leave > Eligibility\n\nPermanent UK employees receive 25 days of paid annual leave per calendar year, plus England and Wales bank holidays. Part-time entitlement is pro-rated by contracted weekly hours. Contractors are outside this policy. The leave year runs from 1 January to 31 December.\n</excerpt>\n\n<excerpt id=\"annual_leave#carry-over\" document=\"Annual leave\" doc_id=\"NS-ANNUAL-LEAVE\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nAnnual leave > Carry-over\n\nUp to 5 unused days may be carried into the next calendar year with line-manager approval recorded by 15 December. Carried days must be used by 31 March. This demo policy does not describe statutory exceptions or individual contractual arrangements; refer those questions to the People team.\n</excerpt>\n\n<excerpt id=\"annual_leave#how-to-request\" document=\"Annual leave\" doc_id=\"NS-ANNUAL-LEAVE\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nAnnual leave > How to request\n\nSubmit requests in PeopleHub at least 10 working days before the first day of leave. Your line manager approves or declines within 3 working days. Do not treat a submitted request as approved. Requests for more than 10 consecutive working days also need approval from Priya Shah, Head of People.\n</excerpt>\n\n<excerpt id=\"onboarding#first-week\" document=\"New starter onboarding\" doc_id=\"NS-ONBOARDING\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nNew starter onboarding > First week\n\nComplete information security and code of conduct training within 5 working days of starting. Your line manager agrees your first-month goals by the end of working day 5. Read the annual leave, sickness absence and expenses policies before making related requests or claims.\n</excerpt>\n\n<excerpt id=\"sickness_absence#illness-on-holiday\" document=\"Sickness absence\" doc_id=\"NS-SICKNESS-ABSENCE\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nSickness absence > Illness on holiday\n\nFor illness during approved annual leave, use the same first-day reporting deadline and evidence rules. The People team reviews reclassification of annual leave; see the annual leave policy. This document does not guarantee that every affected day will be restored.\n</excerpt>",
+  "latency_s": {
+   "retrieval": 2.09,
+   "generation": 0.84
+  },
+  "model": "openai/gpt-oss-120b",
+  "outcome": "evidence",
+  "judge": {
+   "answer_score": 2,
+   "citation_score": null,
+   "faithful": true,
+   "unsupported_claims": [],
+   "failure_type": "none",
+   "rationale": "The assistant correctly identified that the provided policy excerpts do not contain personal leave balance data and appropriately directed the user to the People team, aligning with the reference answer's expectation to state the limitation."
+  }
+ },
+ "Q15": {
+  "id": "Q15",
+  "answer": "I can't find this in the HR policies available to you, so I can't answer it reliably. Please contact the People team at people@northstar-demo.example.",
+  "citations": [],
+  "invalid_citations": [],
+  "hits": [],
+  "context": "",
+  "latency_s": {
+   "retrieval": 1.41,
+   "generation": 0.0
+  },
+  "model": null,
+  "outcome": "below_threshold",
+  "judge": {
+   "answer_score": 2,
+   "citation_score": null,
+   "faithful": true,
+   "unsupported_claims": [],
+   "failure_type": "none",
+   "rationale": "The assistant correctly identified that the information was missing from the provided excerpts and refused to answer, directing the user to the People team as expected."
+  }
+ },
+ "Q16": {
+  "id": "Q16",
+  "answer": "You must submit an annual‑leave request in PeopleHub at least **10 working days before the first day of leave**[annual_leave#how-to-request], and your line manager must **approve or decline within 3 working days** of the submission[annual_leave#how-to-request].",
+  "citations": [
+   "annual_leave#how-to-request"
+  ],
+  "invalid_citations": [],
+  "hits": [
+   {
+    "id": "annual_leave#how-to-request",
+    "source_uri": "data/annual_leave.md",
+    "rerank": 0.97161794
+   },
+   {
+    "id": "onboarding#first-week",
+    "source_uri": "data/onboarding.md",
+    "rerank": 0.16344544
+   },
+   {
+    "id": "annual_leave#illness-during-leave",
+    "source_uri": "data/annual_leave.md",
+    "rerank": 0.15895613
+   },
+   {
+    "id": "annual_leave#carry-over",
+    "source_uri": "data/annual_leave.md",
+    "rerank": 0.04038907
+   },
+   {
+    "id": "parental_leave#how-to-request",
+    "source_uri": "data/parental_leave.md",
+    "rerank": 0.012920474
+   }
+  ],
+  "context": "<excerpt id=\"annual_leave#how-to-request\" document=\"Annual leave\" doc_id=\"NS-ANNUAL-LEAVE\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nAnnual leave > How to request\n\nSubmit requests in PeopleHub at least 10 working days before the first day of leave. Your line manager approves or declines within 3 working days. Do not treat a submitted request as approved. Requests for more than 10 consecutive working days also need approval from Priya Shah, Head of People.\n</excerpt>\n\n<excerpt id=\"onboarding#first-week\" document=\"New starter onboarding\" doc_id=\"NS-ONBOARDING\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nNew starter onboarding > First week\n\nComplete information security and code of conduct training within 5 working days of starting. Your line manager agrees your first-month goals by the end of working day 5. Read the annual leave, sickness absence and expenses policies before making related requests or claims.\n</excerpt>\n\n<excerpt id=\"annual_leave#illness-during-leave\" document=\"Annual leave\" doc_id=\"NS-ANNUAL-LEAVE\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nAnnual leave > Illness during leave\n\nIf you become ill during approved annual leave, notify your line manager by 10:00 on the first affected working day and follow the sickness reporting policy. The People team reviews requests to reclassify affected days. Reclassification is not automatic.\n</excerpt>\n\n<excerpt id=\"annual_leave#carry-over\" document=\"Annual leave\" doc_id=\"NS-ANNUAL-LEAVE\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nAnnual leave > Carry-over\n\nUp to 5 unused days may be carried into the next calendar year with line-manager approval recorded by 15 December. Carried days must be used by 31 March. This demo policy does not describe statutory exceptions or individual contractual arrangements; refer those questions to the People team.\n</excerpt>\n\n<excerpt id=\"parental_leave#how-to-request\" document=\"Enhanced parental leave\" doc_id=\"NS-PARENTAL-LEAVE\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nEnhanced parental leave > How to request\n\nNotify the People team at least 15 weeks before the expected birth date, or within 7 calendar days of receiving adoption placement notification. Provide the expected date and proposed leave dates. The People team confirms eligibility and the pay schedule in writing.\n</excerpt>",
+  "latency_s": {
+   "retrieval": 2.06,
+   "generation": 0.92
+  },
+  "model": "openai/gpt-oss-120b",
+  "outcome": "evidence",
+  "judge": {
+   "answer_score": 2,
+   "citation_score": 2,
+   "faithful": true,
+   "unsupported_claims": [],
+   "failure_type": "none",
+   "rationale": "The answer correctly states the 10-working-day submission requirement and the 3-working-day manager response time, both of which are directly supported by the provided excerpt. The citations are accurate and the claims are faithful to the source text."
+  }
+ },
+ "Q17": {
+  "id": "Q17",
+  "answer": "Your leave request must be approved by your line manager **and** also by Priya Shah, Head of People, because it is for more than 10 consecutive working days[annual_leave#how-to-request].",
+  "citations": [
+   "annual_leave#how-to-request"
+  ],
+  "invalid_citations": [],
+  "hits": [
+   {
+    "id": "annual_leave#how-to-request",
+    "source_uri": "data/annual_leave.md",
+    "rerank": 0.6353356
+   },
+   {
+    "id": "expenses#approval-and-payment",
+    "source_uri": "data/expenses.md",
+    "rerank": 0.012007351
+   },
+   {
+    "id": "remote_work#eligibility",
+    "source_uri": "data/remote_work.md",
+    "rerank": 0.008380453
+   },
+   {
+    "id": "annual_leave#carry-over",
+    "source_uri": "data/annual_leave.md",
+    "rerank": 0.007636216
+   },
+   {
+    "id": "annual_leave#illness-during-leave",
+    "source_uri": "data/annual_leave.md",
+    "rerank": 0.0034162789
+   }
+  ],
+  "context": "<excerpt id=\"annual_leave#how-to-request\" document=\"Annual leave\" doc_id=\"NS-ANNUAL-LEAVE\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nAnnual leave > How to request\n\nSubmit requests in PeopleHub at least 10 working days before the first day of leave. Your line manager approves or declines within 3 working days. Do not treat a submitted request as approved. Requests for more than 10 consecutive working days also need approval from Priya Shah, Head of People.\n</excerpt>\n\n<excerpt id=\"expenses#approval-and-payment\" document=\"Business expenses\" doc_id=\"NS-EXPENSES\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nBusiness expenses > Approval and payment\n\nYour line manager approves claims up to and including £500. Claims above £500 also need Finance approval from Daniel Reed. Approved claims are paid in the next Friday payment run if Finance receives them by Tuesday at 12:00; later claims move to the following Friday. This policy cannot show whether an individual payment has been made.\n</excerpt>\n\n<excerpt id=\"remote_work#eligibility\" document=\"Remote and hybrid working\" doc_id=\"NS-REMOTE-WORK\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nRemote and hybrid working > Eligibility\n\nPermanent UK employees whose roles can be performed remotely may request hybrid working after completing their first 4 weeks. Hybrid arrangements require written line-manager approval. Contractors must use their engagement agreement; this policy does not grant them hybrid eligibility.\n</excerpt>\n\n<excerpt id=\"annual_leave#carry-over\" document=\"Annual leave\" doc_id=\"NS-ANNUAL-LEAVE\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nAnnual leave > Carry-over\n\nUp to 5 unused days may be carried into the next calendar year with line-manager approval recorded by 15 December. Carried days must be used by 31 March. This demo policy does not describe statutory exceptions or individual contractual arrangements; refer those questions to the People team.\n</excerpt>\n\n<excerpt id=\"annual_leave#illness-during-leave\" document=\"Annual leave\" doc_id=\"NS-ANNUAL-LEAVE\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nAnnual leave > Illness during leave\n\nIf you become ill during approved annual leave, notify your line manager by 10:00 on the first affected working day and follow the sickness reporting policy. The People team reviews requests to reclassify affected days. Reclassification is not automatic.\n</excerpt>",
+  "latency_s": {
+   "retrieval": 2.68,
+   "generation": 3.36
+  },
+  "model": "openai/gpt-oss-120b",
+  "outcome": "evidence",
+  "judge": {
+   "answer_score": 2,
+   "citation_score": 2,
+   "faithful": true,
+   "unsupported_claims": [],
+   "failure_type": "none",
+   "rationale": "The assistant correctly identified that both line-manager and Priya Shah (Head of People) approval are required for leave exceeding 10 consecutive working days, accurately citing the relevant policy excerpt."
+  }
+ },
+ "Q18": {
+  "id": "Q18",
+  "answer": "You do not need a fit note for a 5‑day sickness absence; you can self‑certify absences of up to 7 consecutive calendar days in PeopleHub. [sickness_absence#evidence]",
+  "citations": [
+   "sickness_absence#evidence"
+  ],
+  "invalid_citations": [],
+  "hits": [
+   {
+    "id": "sickness_absence#evidence",
+    "source_uri": "data/sickness_absence.md",
+    "rerank": 0.7027341
+   },
+   {
+    "id": "sickness_absence#illness-on-holiday",
+    "source_uri": "data/sickness_absence.md",
+    "rerank": 0.015967654
+   },
+   {
+    "id": "sickness_absence#reporting",
+    "source_uri": "data/sickness_absence.md",
+    "rerank": 0.013428255
+   },
+   {
+    "id": "annual_leave#illness-during-leave",
+    "source_uri": "data/annual_leave.md",
+    "rerank": 0.009821793
+   },
+   {
+    "id": "annual_leave#carry-over",
+    "source_uri": "data/annual_leave.md",
+    "rerank": 0.0027576224
+   }
+  ],
+  "context": "<excerpt id=\"sickness_absence#evidence\" document=\"Sickness absence\" doc_id=\"NS-SICKNESS-ABSENCE\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nSickness absence > Evidence\n\nSelf-certify absences of up to 7 consecutive calendar days in PeopleHub. For more than 7 consecutive calendar days, provide a fit note covering the absence. Weekends count when determining whether a fit note is required.\n</excerpt>\n\n<excerpt id=\"sickness_absence#illness-on-holiday\" document=\"Sickness absence\" doc_id=\"NS-SICKNESS-ABSENCE\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nSickness absence > Illness on holiday\n\nFor illness during approved annual leave, use the same first-day reporting deadline and evidence rules. The People team reviews reclassification of annual leave; see the annual leave policy. This document does not guarantee that every affected day will be restored.\n</excerpt>\n\n<excerpt id=\"sickness_absence#reporting\" document=\"Sickness absence\" doc_id=\"NS-SICKNESS-ABSENCE\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nSickness absence > Reporting\n\nIf you cannot work because of illness, telephone your line manager by 10:00 on the first affected working day. If they are unavailable, email people@northstar-demo.example by the same deadline. Tell them your likely absence duration if known; you do not need to disclose your diagnosis to colleagues.\n</excerpt>\n\n<excerpt id=\"annual_leave#illness-during-leave\" document=\"Annual leave\" doc_id=\"NS-ANNUAL-LEAVE\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nAnnual leave > Illness during leave\n\nIf you become ill during approved annual leave, notify your line manager by 10:00 on the first affected working day and follow the sickness reporting policy. The People team reviews requests to reclassify affected days. Reclassification is not automatic.\n</excerpt>\n\n<excerpt id=\"annual_leave#carry-over\" document=\"Annual leave\" doc_id=\"NS-ANNUAL-LEAVE\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nAnnual leave > Carry-over\n\nUp to 5 unused days may be carried into the next calendar year with line-manager approval recorded by 15 December. Carried days must be used by 31 March. This demo policy does not describe statutory exceptions or individual contractual arrangements; refer those questions to the People team.\n</excerpt>",
+  "latency_s": {
+   "retrieval": 1.77,
+   "generation": 5.83
+  },
+  "model": "openai/gpt-oss-120b",
+  "outcome": "evidence",
+  "judge": {
+   "answer_score": 2,
+   "citation_score": 2,
+   "faithful": true,
+   "unsupported_claims": [],
+   "failure_type": "none",
+   "rationale": "The answer correctly states that a fit note is not required for 5 days because absences up to 7 consecutive calendar days are self-certified, which is fully supported by the provided excerpt."
+  }
+ },
+ "Q19": {
+  "id": "Q19",
+  "answer": "No. Self‑certification is only allowed for absences of up to 7 consecutive **calendar** days, and weekends are counted when determining the length of the absence. Your Thursday‑to‑following‑Friday sickness spans more than 7 calendar days, so a fit note is required. [sickness_absence#evidence]",
+  "citations": [
+   "sickness_absence#evidence"
+  ],
+  "invalid_citations": [],
+  "hits": [
+   {
+    "id": "sickness_absence#evidence",
+    "source_uri": "data/sickness_absence.md",
+    "rerank": 0.58717394
+   },
+   {
+    "id": "sickness_absence#reporting",
+    "source_uri": "data/sickness_absence.md",
+    "rerank": 0.0021657674
+   }
+  ],
+  "context": "<excerpt id=\"sickness_absence#evidence\" document=\"Sickness absence\" doc_id=\"NS-SICKNESS-ABSENCE\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nSickness absence > Evidence\n\nSelf-certify absences of up to 7 consecutive calendar days in PeopleHub. For more than 7 consecutive calendar days, provide a fit note covering the absence. Weekends count when determining whether a fit note is required.\n</excerpt>\n\n<excerpt id=\"sickness_absence#reporting\" document=\"Sickness absence\" doc_id=\"NS-SICKNESS-ABSENCE\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nSickness absence > Reporting\n\nIf you cannot work because of illness, telephone your line manager by 10:00 on the first affected working day. If they are unavailable, email people@northstar-demo.example by the same deadline. Tell them your likely absence duration if known; you do not need to disclose your diagnosis to colleagues.\n</excerpt>",
+  "latency_s": {
+   "retrieval": 2.64,
+   "generation": 3.38
+  },
+  "model": "openai/gpt-oss-120b",
+  "outcome": "evidence",
+  "judge": {
+   "answer_score": 2,
+   "citation_score": 2,
+   "faithful": true,
+   "unsupported_claims": [],
+   "failure_type": "none",
+   "rationale": "The assistant correctly identified that weekends count toward the 7-day limit, meaning the 9-day absence requires a fit note, and cited the relevant excerpt."
+  }
+ },
+ "Q20": {
+  "id": "Q20",
+  "answer": "You receive up to 10 working days of company sick pay at your full base pay for each calendar year, provided you are a permanent UK employee who has completed probation [sickness_absence#company-sick-pay].  \n\n- If you are still on probation, you need to ask the People team about your pay arrangement [sickness_absence#company-sick-pay].",
+  "citations": [
+   "sickness_absence#company-sick-pay"
+  ],
+  "invalid_citations": [],
+  "hits": [
+   {
+    "id": "sickness_absence#company-sick-pay",
+    "source_uri": "data/sickness_absence.md",
+    "rerank": 0.8967949
+   },
+   {
+    "id": "parental_leave#primary-carer-benefit",
+    "source_uri": "data/parental_leave.md",
+    "rerank": 0.007606672
+   }
+  ],
+  "context": "<excerpt id=\"sickness_absence#company-sick-pay\" document=\"Sickness absence\" doc_id=\"NS-SICKNESS-ABSENCE\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nSickness absence > Company sick pay\n\nPermanent UK employees who have passed probation receive up to 10 working days of company sick pay at full base pay per calendar year. Employees still on probation should ask the People team about their pay arrangements. Statutory sick pay eligibility, rates and interaction with company pay are not specified here.\n</excerpt>\n\n<excerpt id=\"parental_leave#primary-carer-benefit\" document=\"Enhanced parental leave\" doc_id=\"NS-PARENTAL-LEAVE\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nEnhanced parental leave > Primary carer benefit\n\nAn eligible primary carer may take up to 26 weeks under this enhanced scheme: 12 weeks at full base pay followed by 14 weeks without company pay. Any statutory payment and interaction with this enhancement must be confirmed by the People team. This document does not specify statutory payment rates.\n</excerpt>",
+  "latency_s": {
+   "retrieval": 2.04,
+   "generation": 2.64
+  },
+  "model": "openai/gpt-oss-120b",
+  "outcome": "evidence",
+  "judge": {
+   "answer_score": 2,
+   "citation_score": 2,
+   "faithful": true,
+   "unsupported_claims": [],
+   "failure_type": "none",
+   "rationale": "The assistant correctly identifies the 10 working days at full base pay for permanent UK employees past probation and notes the requirement for probationary employees to contact the People team, citing the relevant excerpt accurately."
+  }
+ },
+ "Q21": {
+  "id": "Q21",
+  "answer": "The HR policies state that expense claims must be submitted **within 30 calendar days of the purchase date**[expenses#eligibility-and-submission].",
+  "citations": [
+   "expenses#eligibility-and-submission"
+  ],
+  "invalid_citations": [],
+  "hits": [
+   {
+    "id": "expenses#eligibility-and-submission",
+    "source_uri": "data/expenses.md",
+    "rerank": 0.9022657
+   },
+   {
+    "id": "expenses#approval-and-payment",
+    "source_uri": "data/expenses.md",
+    "rerank": 0.047869004
+   },
+   {
+    "id": "expenses#home-office-purchases",
+    "source_uri": "data/expenses.md",
+    "rerank": 0.03085051
+   },
+   {
+    "id": "onboarding#first-week",
+    "source_uri": "data/onboarding.md",
+    "rerank": 0.014227047
+   },
+   {
+    "id": "remote_work#equipment-and-expenses",
+    "source_uri": "data/remote_work.md",
+    "rerank": 0.0039300853
+   }
+  ],
+  "context": "<excerpt id=\"expenses#eligibility-and-submission\" document=\"Business expenses\" doc_id=\"NS-EXPENSES\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nBusiness expenses > Eligibility and submission\n\nEmployees may claim reasonable, necessary business expenses through SpendTrack. Submit claims within 30 calendar days of the purchase date. Attach an itemised receipt and state the business purpose. A missing receipt requires written approval from Finance before submission; a bank statement alone is not an itemised receipt.\n</excerpt>\n\n<excerpt id=\"expenses#approval-and-payment\" document=\"Business expenses\" doc_id=\"NS-EXPENSES\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nBusiness expenses > Approval and payment\n\nYour line manager approves claims up to and including £500. Claims above £500 also need Finance approval from Daniel Reed. Approved claims are paid in the next Friday payment run if Finance receives them by Tuesday at 12:00; later claims move to the following Friday. This policy cannot show whether an individual payment has been made.\n</excerpt>\n\n<excerpt id=\"expenses#home-office-purchases\" document=\"Business expenses\" doc_id=\"NS-EXPENSES\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nBusiness expenses > Home-office purchases\n\nApply the eligibility, approval and £150 annual limit in the remote working policy before submitting a home-office claim. The £30 meal limit does not apply to home-office equipment. Purchases without the required advance approval are referred to Finance for review; payment is not guaranteed.\n</excerpt>\n\n<excerpt id=\"onboarding#first-week\" document=\"New starter onboarding\" doc_id=\"NS-ONBOARDING\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nNew starter onboarding > First week\n\nComplete information security and code of conduct training within 5 working days of starting. Your line manager agrees your first-month goals by the end of working day 5. Read the annual leave, sickness absence and expenses policies before making related requests or claims.\n</excerpt>\n\n<excerpt id=\"remote_work#equipment-and-expenses\" document=\"Remote and hybrid working\" doc_id=\"NS-REMOTE-WORK\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nRemote and hybrid working > Equipment and expenses\n\nIT supplies a managed laptop and one headset. The annual home-office allowance is up to £150 per calendar year for an approved chair, keyboard or monitor. Obtain written line-manager approval before purchase and submit the claim under the expenses policy. Internet subscriptions, electricity and personal phone contracts are not reimbursed.\n</excerpt>",
+  "latency_s": {
+   "retrieval": 0.67,
+   "generation": 8.88
+  },
+  "model": "openai/gpt-oss-120b",
+  "outcome": "evidence",
+  "judge": {
+   "answer_score": 1,
+   "citation_score": 2,
+   "faithful": true,
+   "unsupported_claims": [],
+   "failure_type": "generation",
+   "rationale": "The answer correctly identifies the 30-day deadline and cites the correct excerpt, but it is incomplete as it omits the required submission method (SpendTrack) and documentation (itemised receipt and business purpose) included in the reference answer."
+  }
+ },
+ "Q22": {
+  "id": "Q22",
+  "answer": "No—you cannot replace the receipt with only a bank statement. The policy requires an itemised receipt, and if the receipt is missing you must obtain written approval from Finance before you can submit the claim[expenses#eligibility-and-submission].",
+  "citations": [
+   "expenses#eligibility-and-submission"
+  ],
+  "invalid_citations": [],
+  "hits": [
+   {
+    "id": "expenses#eligibility-and-submission",
+    "source_uri": "data/expenses.md",
+    "rerank": 0.4156695
+   }
+  ],
+  "context": "<excerpt id=\"expenses#eligibility-and-submission\" document=\"Business expenses\" doc_id=\"NS-EXPENSES\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nBusiness expenses > Eligibility and submission\n\nEmployees may claim reasonable, necessary business expenses through SpendTrack. Submit claims within 30 calendar days of the purchase date. Attach an itemised receipt and state the business purpose. A missing receipt requires written approval from Finance before submission; a bank statement alone is not an itemised receipt.\n</excerpt>",
+  "latency_s": {
+   "retrieval": 1.44,
+   "generation": 0.73
+  },
+  "model": "openai/gpt-oss-120b",
+  "outcome": "evidence",
+  "judge": {
+   "answer_score": 2,
+   "citation_score": 2,
+   "faithful": true,
+   "unsupported_claims": [],
+   "failure_type": "none",
+   "rationale": "The assistant correctly states that a bank statement is not an acceptable substitute for an itemised receipt and that written approval from Finance is required for a missing receipt, fully aligning with the provided policy excerpt."
+  }
+ },
+ "Q23": {
+  "id": "Q23",
+  "answer": "Your line manager must approve the claim, and because it exceeds £500 it also requires Finance approval from Daniel Reed[expenses#approval-and-payment].",
+  "citations": [
+   "expenses#approval-and-payment"
+  ],
+  "invalid_citations": [],
+  "hits": [
+   {
+    "id": "expenses#approval-and-payment",
+    "source_uri": "data/expenses.md",
+    "rerank": 0.5794599
+   },
+   {
+    "id": "remote_work#equipment-and-expenses",
+    "source_uri": "data/remote_work.md",
+    "rerank": 0.032528225
+   },
+   {
+    "id": "expenses#eligibility-and-submission",
+    "source_uri": "data/expenses.md",
+    "rerank": 0.020215968
+   },
+   {
+    "id": "expenses#home-office-purchases",
+    "source_uri": "data/expenses.md",
+    "rerank": 0.010052369
+   },
+   {
+    "id": "expenses#travel-and-meals",
+    "source_uri": "data/expenses.md",
+    "rerank": 0.008315778
+   }
+  ],
+  "context": "<excerpt id=\"expenses#approval-and-payment\" document=\"Business expenses\" doc_id=\"NS-EXPENSES\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nBusiness expenses > Approval and payment\n\nYour line manager approves claims up to and including £500. Claims above £500 also need Finance approval from Daniel Reed. Approved claims are paid in the next Friday payment run if Finance receives them by Tuesday at 12:00; later claims move to the following Friday. This policy cannot show whether an individual payment has been made.\n</excerpt>\n\n<excerpt id=\"remote_work#equipment-and-expenses\" document=\"Remote and hybrid working\" doc_id=\"NS-REMOTE-WORK\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nRemote and hybrid working > Equipment and expenses\n\nIT supplies a managed laptop and one headset. The annual home-office allowance is up to £150 per calendar year for an approved chair, keyboard or monitor. Obtain written line-manager approval before purchase and submit the claim under the expenses policy. Internet subscriptions, electricity and personal phone contracts are not reimbursed.\n</excerpt>\n\n<excerpt id=\"expenses#eligibility-and-submission\" document=\"Business expenses\" doc_id=\"NS-EXPENSES\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nBusiness expenses > Eligibility and submission\n\nEmployees may claim reasonable, necessary business expenses through SpendTrack. Submit claims within 30 calendar days of the purchase date. Attach an itemised receipt and state the business purpose. A missing receipt requires written approval from Finance before submission; a bank statement alone is not an itemised receipt.\n</excerpt>\n\n<excerpt id=\"expenses#home-office-purchases\" document=\"Business expenses\" doc_id=\"NS-EXPENSES\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nBusiness expenses > Home-office purchases\n\nApply the eligibility, approval and £150 annual limit in the remote working policy before submitting a home-office claim. The £30 meal limit does not apply to home-office equipment. Purchases without the required advance approval are referred to Finance for review; payment is not guaranteed.\n</excerpt>\n\n<excerpt id=\"expenses#travel-and-meals\" document=\"Business expenses\" doc_id=\"NS-EXPENSES\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nBusiness expenses > Travel and meals\n\nBook standard-class rail travel. A business-trip evening meal may be claimed up to £30 per person, including service charges. Alcohol is not reimbursed. Normal home-to-office commuting is not reimbursed, including the office days required by the remote working policy. Taxis require advance line-manager approval unless there is an immediate safety concern; explain any exception in the claim.\n</excerpt>",
+  "latency_s": {
+   "retrieval": 0.7,
+   "generation": 3.88
+  },
+  "model": "openai/gpt-oss-120b",
+  "outcome": "evidence",
+  "judge": {
+   "answer_score": 2,
+   "citation_score": 2,
+   "faithful": true,
+   "unsupported_claims": [],
+   "failure_type": "none",
+   "rationale": "The assistant correctly identified that a £620 claim requires approval from both the line manager and Finance (Daniel Reed) because it exceeds the £500 threshold, citing the relevant excerpt accurately."
+  }
+ },
+ "Q24": {
+  "id": "Q24",
+  "answer": "No. Because Finance received the claim after the Tuesday 12:00 deadline, it will not be included in the upcoming Friday payment run and will be paid in the following Friday’s run instead[expenses#approval-and-payment].",
+  "citations": [
+   "expenses#approval-and-payment"
+  ],
+  "invalid_citations": [],
+  "hits": [
+   {
+    "id": "expenses#approval-and-payment",
+    "source_uri": "data/expenses.md",
+    "rerank": 0.9871788
+   },
+   {
+    "id": "expenses#eligibility-and-submission",
+    "source_uri": "data/expenses.md",
+    "rerank": 0.0030873693
+   },
+   {
+    "id": "expenses#home-office-purchases",
+    "source_uri": "data/expenses.md",
+    "rerank": 0.0022872277
+   }
+  ],
+  "context": "<excerpt id=\"expenses#approval-and-payment\" document=\"Business expenses\" doc_id=\"NS-EXPENSES\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nBusiness expenses > Approval and payment\n\nYour line manager approves claims up to and including £500. Claims above £500 also need Finance approval from Daniel Reed. Approved claims are paid in the next Friday payment run if Finance receives them by Tuesday at 12:00; later claims move to the following Friday. This policy cannot show whether an individual payment has been made.\n</excerpt>\n\n<excerpt id=\"expenses#eligibility-and-submission\" document=\"Business expenses\" doc_id=\"NS-EXPENSES\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nBusiness expenses > Eligibility and submission\n\nEmployees may claim reasonable, necessary business expenses through SpendTrack. Submit claims within 30 calendar days of the purchase date. Attach an itemised receipt and state the business purpose. A missing receipt requires written approval from Finance before submission; a bank statement alone is not an itemised receipt.\n</excerpt>\n\n<excerpt id=\"expenses#home-office-purchases\" document=\"Business expenses\" doc_id=\"NS-EXPENSES\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nBusiness expenses > Home-office purchases\n\nApply the eligibility, approval and £150 annual limit in the remote working policy before submitting a home-office claim. The £30 meal limit does not apply to home-office equipment. Purchases without the required advance approval are referred to Finance for review; payment is not guaranteed.\n</excerpt>",
+  "latency_s": {
+   "retrieval": 0.72,
+   "generation": 5.43
+  },
+  "model": "openai/gpt-oss-120b",
+  "outcome": "evidence",
+  "judge": {
+   "answer_score": 2,
+   "citation_score": 2,
+   "faithful": true,
+   "unsupported_claims": [],
+   "failure_type": "none",
+   "rationale": "The assistant correctly identifies that a Wednesday receipt misses the Tuesday 12:00 deadline for the current Friday run, citing the relevant excerpt. It accurately reflects the policy's limitation regarding individual payment status."
+  }
+ },
+ "Q25": {
+  "id": "Q25",
+  "answer": "No. Alcohol, including a glass of wine, is not reimbursed even when the total dinner cost is within the £30 per‑person limit [expenses#travel-and-meals].",
+  "citations": [
+   "expenses#travel-and-meals"
+  ],
+  "invalid_citations": [],
+  "hits": [
+   {
+    "id": "expenses#travel-and-meals",
+    "source_uri": "data/expenses.md",
+    "rerank": 0.29838914
+   },
+   {
+    "id": "expenses#home-office-purchases",
+    "source_uri": "data/expenses.md",
+    "rerank": 0.036562506
+   },
+   {
+    "id": "code_of_conduct#gifts-and-hospitality",
+    "source_uri": "data/code_of_conduct.md",
+    "rerank": 0.0031603526
+   },
+   {
+    "id": "expenses#approval-and-payment",
+    "source_uri": "data/expenses.md",
+    "rerank": 0.0026010938
+   }
+  ],
+  "context": "<excerpt id=\"expenses#travel-and-meals\" document=\"Business expenses\" doc_id=\"NS-EXPENSES\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nBusiness expenses > Travel and meals\n\nBook standard-class rail travel. A business-trip evening meal may be claimed up to £30 per person, including service charges. Alcohol is not reimbursed. Normal home-to-office commuting is not reimbursed, including the office days required by the remote working policy. Taxis require advance line-manager approval unless there is an immediate safety concern; explain any exception in the claim.\n</excerpt>\n\n<excerpt id=\"expenses#home-office-purchases\" document=\"Business expenses\" doc_id=\"NS-EXPENSES\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nBusiness expenses > Home-office purchases\n\nApply the eligibility, approval and £150 annual limit in the remote working policy before submitting a home-office claim. The £30 meal limit does not apply to home-office equipment. Purchases without the required advance approval are referred to Finance for review; payment is not guaranteed.\n</excerpt>\n\n<excerpt id=\"code_of_conduct#gifts-and-hospitality\" document=\"Code of conduct\" doc_id=\"NS-CODE-OF-CONDUCT\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nCode of conduct > Gifts and hospitality\n\nA non-cash gift or hospitality worth up to and including £50 may be accepted only if it cannot reasonably influence a business decision. Record it in the Gifts Register within 5 working days. Anything above £50 requires written approval from Compliance before acceptance. Cash and gift cards must always be declined, regardless of value.\n</excerpt>\n\n<excerpt id=\"expenses#approval-and-payment\" document=\"Business expenses\" doc_id=\"NS-EXPENSES\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nBusiness expenses > Approval and payment\n\nYour line manager approves claims up to and including £500. Claims above £500 also need Finance approval from Daniel Reed. Approved claims are paid in the next Friday payment run if Finance receives them by Tuesday at 12:00; later claims move to the following Friday. This policy cannot show whether an individual payment has been made.\n</excerpt>",
+  "latency_s": {
+   "retrieval": 1.81,
+   "generation": 4.49
+  },
+  "model": "openai/gpt-oss-120b",
+  "outcome": "evidence",
+  "judge": {
+   "answer_score": 2,
+   "citation_score": 2,
+   "faithful": true,
+   "unsupported_claims": [],
+   "failure_type": "none",
+   "rationale": "The assistant correctly identifies that alcohol is not reimbursed even within the £30 limit, directly supported by the provided excerpt."
+  }
+ },
+ "Q26": {
+  "id": "Q26",
+  "answer": "No. The home‑office allowance covers only an approved chair, keyboard or monitor and expressly excludes internet subscriptions, so broadband cannot be claimed under the allowance. [remote_work#equipment-and-expenses]",
+  "citations": [
+   "remote_work#equipment-and-expenses"
+  ],
+  "invalid_citations": [],
+  "hits": [
+   {
+    "id": "remote_work#equipment-and-expenses",
+    "source_uri": "data/remote_work.md",
+    "rerank": 0.19636346
+   },
+   {
+    "id": "expenses#home-office-purchases",
+    "source_uri": "data/expenses.md",
+    "rerank": 0.016152835
+   },
+   {
+    "id": "onboarding#first-month",
+    "source_uri": "data/onboarding.md",
+    "rerank": 0.0041824942
+   }
+  ],
+  "context": "<excerpt id=\"remote_work#equipment-and-expenses\" document=\"Remote and hybrid working\" doc_id=\"NS-REMOTE-WORK\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nRemote and hybrid working > Equipment and expenses\n\nIT supplies a managed laptop and one headset. The annual home-office allowance is up to £150 per calendar year for an approved chair, keyboard or monitor. Obtain written line-manager approval before purchase and submit the claim under the expenses policy. Internet subscriptions, electricity and personal phone contracts are not reimbursed.\n</excerpt>\n\n<excerpt id=\"expenses#home-office-purchases\" document=\"Business expenses\" doc_id=\"NS-EXPENSES\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nBusiness expenses > Home-office purchases\n\nApply the eligibility, approval and £150 annual limit in the remote working policy before submitting a home-office claim. The £30 meal limit does not apply to home-office equipment. Purchases without the required advance approval are referred to Finance for review; payment is not guaranteed.\n</excerpt>\n\n<excerpt id=\"onboarding#first-month\" document=\"New starter onboarding\" doc_id=\"NS-ONBOARDING\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nNew starter onboarding > First month\n\nYour line manager holds a check-in at the end of weeks 1, 2 and 4. Permanent UK employees may request hybrid working after their first 4 weeks, subject to role suitability and written line-manager approval under the remote working policy. The company home-office allowance is not an automatic joining bonus.\n</excerpt>",
+  "latency_s": {
+   "retrieval": 1.82,
+   "generation": 3.34
+  },
+  "model": "openai/gpt-oss-120b",
+  "outcome": "evidence",
+  "judge": {
+   "answer_score": 2,
+   "citation_score": 2,
+   "faithful": true,
+   "unsupported_claims": [],
+   "failure_type": "none",
+   "rationale": "The assistant correctly states that broadband cannot be claimed, citing the specific exclusion of internet subscriptions and the limited scope of the allowance found in the provided excerpt."
+  }
+ },
+ "Q27": {
+  "id": "Q27",
+  "answer": "The policy sets a minimum of 2 office days per working week, but for staff who work fewer than 5 days a week the exact attendance pattern is agreed individually with your line manager and there is no automatic pro‑rata rule [remote_work#office-attendance].  \n\n**What to do**\n\n1. Plan to be in the office at least 2 days each week.  \n2. Discuss and confirm your specific attendance schedule with your line manager, as the final arrangement is decided case‑by‑case.",
+  "citations": [
+   "remote_work#office-attendance"
+  ],
+  "invalid_citations": [],
+  "hits": [
+   {
+    "id": "remote_work#office-attendance",
+    "source_uri": "data/remote_work.md",
+    "rerank": 0.76454014
+   },
+   {
+    "id": "annual_leave#how-to-request",
+    "source_uri": "data/annual_leave.md",
+    "rerank": 0.010986943
+   },
+   {
+    "id": "annual_leave#eligibility",
+    "source_uri": "data/annual_leave.md",
+    "rerank": 0.0062170783
+   },
+   {
+    "id": "onboarding#first-week",
+    "source_uri": "data/onboarding.md",
+    "rerank": 0.0041179177
+   },
+   {
+    "id": "onboarding#first-month",
+    "source_uri": "data/onboarding.md",
+    "rerank": 0.0020507434
+   }
+  ],
+  "context": "<excerpt id=\"remote_work#office-attendance\" document=\"Remote and hybrid working\" doc_id=\"NS-REMOTE-WORK\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nRemote and hybrid working > Office attendance\n\nThe standard arrangement is at least 2 office days per working week, agreed with your line manager. Employees working fewer than 5 days per week agree an attendance pattern individually; this policy gives no automatic pro-rata formula. Team meetings may require attendance on a specified day.\n</excerpt>\n\n<excerpt id=\"annual_leave#how-to-request\" document=\"Annual leave\" doc_id=\"NS-ANNUAL-LEAVE\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nAnnual leave > How to request\n\nSubmit requests in PeopleHub at least 10 working days before the first day of leave. Your line manager approves or declines within 3 working days. Do not treat a submitted request as approved. Requests for more than 10 consecutive working days also need approval from Priya Shah, Head of People.\n</excerpt>\n\n<excerpt id=\"annual_leave#eligibility\" document=\"Annual leave\" doc_id=\"NS-ANNUAL-LEAVE\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nAnnual leave > Eligibility\n\nPermanent UK employees receive 25 days of paid annual leave per calendar year, plus England and Wales bank holidays. Part-time entitlement is pro-rated by contracted weekly hours. Contractors are outside this policy. The leave year runs from 1 January to 31 December.\n</excerpt>\n\n<excerpt id=\"onboarding#first-week\" document=\"New starter onboarding\" doc_id=\"NS-ONBOARDING\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nNew starter onboarding > First week\n\nComplete information security and code of conduct training within 5 working days of starting. Your line manager agrees your first-month goals by the end of working day 5. Read the annual leave, sickness absence and expenses policies before making related requests or claims.\n</excerpt>\n\n<excerpt id=\"onboarding#first-month\" document=\"New starter onboarding\" doc_id=\"NS-ONBOARDING\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nNew starter onboarding > First month\n\nYour line manager holds a check-in at the end of weeks 1, 2 and 4. Permanent UK employees may request hybrid working after their first 4 weeks, subject to role suitability and written line-manager approval under the remote working policy. The company home-office allowance is not an automatic joining bonus.\n</excerpt>",
+  "latency_s": {
+   "retrieval": 1.14,
+   "generation": 5.12
+  },
+  "model": "openai/gpt-oss-120b",
+  "outcome": "evidence",
+  "judge": {
+   "answer_score": 1,
+   "citation_score": 2,
+   "faithful": true,
+   "unsupported_claims": [],
+   "failure_type": "generation",
+   "rationale": "The answer correctly cites the policy but fails to clarify that the '2 days' standard applies to full-time staff, leading to a misleading recommendation for a part-time employee to plan for 2 days when the policy explicitly states the pattern is agreed individually with no automatic formula."
+  }
+ },
+ "Q28": {
+  "id": "Q28",
+  "answer": "No. Contractors are excluded from both the annual‑leave entitlement and the hybrid‑working eligibility described in the HR policies.\n\n- The annual‑leave policy states that “Contractors are outside this policy” [annual_leave#eligibility].\n- The remote‑and‑hybrid‑working policy specifies that “Contractors must use their engagement agreement; this policy does not grant them hybrid eligibility” [remote_work#eligibility].",
+  "citations": [
+   "annual_leave#eligibility",
+   "remote_work#eligibility"
+  ],
+  "invalid_citations": [],
+  "hits": [
+   {
+    "id": "remote_work#eligibility",
+    "source_uri": "data/remote_work.md",
+    "rerank": 0.65279496
+   },
+   {
+    "id": "annual_leave#eligibility",
+    "source_uri": "data/annual_leave.md",
+    "rerank": 0.5270579
+   },
+   {
+    "id": "parental_leave#support-and-return",
+    "source_uri": "data/parental_leave.md",
+    "rerank": 0.022414217
+   },
+   {
+    "id": "onboarding#first-month",
+    "source_uri": "data/onboarding.md",
+    "rerank": 0.020215968
+   },
+   {
+    "id": "parental_leave#scope-and-eligibility",
+    "source_uri": "data/parental_leave.md",
+    "rerank": 0.019832712
+   }
+  ],
+  "context": "<excerpt id=\"remote_work#eligibility\" document=\"Remote and hybrid working\" doc_id=\"NS-REMOTE-WORK\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nRemote and hybrid working > Eligibility\n\nPermanent UK employees whose roles can be performed remotely may request hybrid working after completing their first 4 weeks. Hybrid arrangements require written line-manager approval. Contractors must use their engagement agreement; this policy does not grant them hybrid eligibility.\n</excerpt>\n\n<excerpt id=\"annual_leave#eligibility\" document=\"Annual leave\" doc_id=\"NS-ANNUAL-LEAVE\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nAnnual leave > Eligibility\n\nPermanent UK employees receive 25 days of paid annual leave per calendar year, plus England and Wales bank holidays. Part-time entitlement is pro-rated by contracted weekly hours. Contractors are outside this policy. The leave year runs from 1 January to 31 December.\n</excerpt>\n\n<excerpt id=\"parental_leave#support-and-return\" document=\"Enhanced parental leave\" doc_id=\"NS-PARENTAL-LEAVE\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nEnhanced parental leave > Support and return\n\nContact Priya Shah at people@northstar-demo.example for confidential planning. Discuss your return arrangements at least 4 weeks before returning. Requests for hybrid working are assessed under the remote working policy; parental leave approval does not automatically approve a remote working pattern.\n</excerpt>\n\n<excerpt id=\"onboarding#first-month\" document=\"New starter onboarding\" doc_id=\"NS-ONBOARDING\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nNew starter onboarding > First month\n\nYour line manager holds a check-in at the end of weeks 1, 2 and 4. Permanent UK employees may request hybrid working after their first 4 weeks, subject to role suitability and written line-manager approval under the remote working policy. The company home-office allowance is not an automatic joining bonus.\n</excerpt>\n\n<excerpt id=\"parental_leave#scope-and-eligibility\" document=\"Enhanced parental leave\" doc_id=\"NS-PARENTAL-LEAVE\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nEnhanced parental leave > Scope and eligibility\n\nThis policy describes fictional enhanced company benefits for permanent UK employees with at least 26 weeks of continuous service by the expected week of birth or placement. Contractors are outside this policy. It does not provide a complete statement of statutory entitlements; ask the People team about statutory rights or eligibility outside this enhancement.\n</excerpt>",
+  "latency_s": {
+   "retrieval": 1.99,
+   "generation": 6.81
+  },
+  "model": "openai/gpt-oss-120b",
+  "outcome": "evidence",
+  "judge": {
+   "answer_score": 2,
+   "citation_score": 2,
+   "faithful": true,
+   "unsupported_claims": [],
+   "failure_type": "none",
+   "rationale": "The assistant correctly identified that contractors are excluded from both policies and cited the specific excerpts supporting each claim, matching the reference answer."
+  }
+ },
+ "Q29": {
+  "id": "Q29",
+  "answer": "No. The policy states you must use the company VPN and managed laptop for company systems and **must not use a shared family computer** when working remotely[remote_work#security].",
+  "citations": [
+   "remote_work#security"
+  ],
+  "invalid_citations": [],
+  "hits": [
+   {
+    "id": "remote_work#security",
+    "source_uri": "data/remote_work.md",
+    "rerank": 0.040162582
+   }
+  ],
+  "context": "<excerpt id=\"remote_work#security\" document=\"Remote and hybrid working\" doc_id=\"NS-REMOTE-WORK\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nRemote and hybrid working > Security\n\nUse the company VPN and managed laptop for company systems. Do not use a shared family computer. Follow the information security policy if equipment is lost or information is disclosed.\n</excerpt>",
+  "latency_s": {
+   "retrieval": 2.66,
+   "generation": 0.78
+  },
+  "model": "openai/gpt-oss-120b",
+  "outcome": "evidence",
+  "judge": {
+   "answer_score": 2,
+   "citation_score": 2,
+   "faithful": true,
+   "unsupported_claims": [],
+   "failure_type": "none",
+   "rationale": "The assistant correctly answered 'No' and cited the specific policy excerpt prohibiting the use of shared family computers and requiring the use of the company VPN and managed laptop."
+  }
+ },
+ "Q30": {
+  "id": "Q30",
+  "answer": "No – you should not try to remote‑wipe the device yourself. Report the stolen laptop to the security team (security@northstar-demo.example or the internal service desk) within one hour so they can coordinate containment [information_security#lost-devices-and-incidents].",
+  "citations": [
+   "information_security#lost-devices-and-incidents"
+  ],
+  "invalid_citations": [],
+  "hits": [
+   {
+    "id": "information_security#lost-devices-and-incidents",
+    "source_uri": "data/information_security.md",
+    "rerank": 0.8017807
+   },
+   {
+    "id": "remote_work#security",
+    "source_uri": "data/remote_work.md",
+    "rerank": 0.007093862
+   },
+   {
+    "id": "information_security#devices-and-access",
+    "source_uri": "data/information_security.md",
+    "rerank": 0.0045032725
+   }
+  ],
+  "context": "<excerpt id=\"information_security#lost-devices-and-incidents\" document=\"Information security\" doc_id=\"NS-INFORMATION-SECURITY\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nInformation security > Lost devices and incidents\n\nReport a lost laptop, suspected phishing, accidental disclosure or unauthorised access to security@northstar-demo.example within 1 hour of discovery. If you cannot use company email, call the fictional internal service desk on extension 4400. Do not wait until the next working day. The security team coordinates containment; do not attempt your own remote wipe.\n</excerpt>\n\n<excerpt id=\"remote_work#security\" document=\"Remote and hybrid working\" doc_id=\"NS-REMOTE-WORK\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nRemote and hybrid working > Security\n\nUse the company VPN and managed laptop for company systems. Do not use a shared family computer. Follow the information security policy if equipment is lost or information is disclosed.\n</excerpt>\n\n<excerpt id=\"information_security#devices-and-access\" document=\"Information security\" doc_id=\"NS-INFORMATION-SECURITY\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nInformation security > Devices and access\n\nUse a company-managed laptop with device encryption and multi-factor authentication for company systems. Use the company VPN when working remotely. Never share passwords or one-time authentication codes. Lock your screen whenever leaving your device unattended.\n</excerpt>",
+  "latency_s": {
+   "retrieval": 2.59,
+   "generation": 2.53
+  },
+  "model": "openai/gpt-oss-120b",
+  "outcome": "evidence",
+  "judge": {
+   "answer_score": 2,
+   "citation_score": 2,
+   "faithful": true,
+   "unsupported_claims": [],
+   "failure_type": "none",
+   "rationale": "The assistant correctly advises against self-wiping and directs the user to report the incident to the security team within one hour, accurately reflecting the policy excerpt provided."
+  }
+ },
+ "Q31": {
+  "id": "Q31",
+  "answer": "Extension 4400 is the phone number for the internal service‑desk that you should call to report a lost laptop, suspected phishing, accidental disclosure or unauthorised access when you cannot use company email [information_security#lost-devices-and-incidents].",
+  "citations": [
+   "information_security#lost-devices-and-incidents"
+  ],
+  "invalid_citations": [],
+  "hits": [
+   {
+    "id": "information_security#lost-devices-and-incidents",
+    "source_uri": "data/information_security.md",
+    "rerank": 0.5297956
+   }
+  ],
+  "context": "<excerpt id=\"information_security#lost-devices-and-incidents\" document=\"Information security\" doc_id=\"NS-INFORMATION-SECURITY\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nInformation security > Lost devices and incidents\n\nReport a lost laptop, suspected phishing, accidental disclosure or unauthorised access to security@northstar-demo.example within 1 hour of discovery. If you cannot use company email, call the fictional internal service desk on extension 4400. Do not wait until the next working day. The security team coordinates containment; do not attempt your own remote wipe.\n</excerpt>",
+  "latency_s": {
+   "retrieval": 1.96,
+   "generation": 2.77
+  },
+  "model": "openai/gpt-oss-120b",
+  "outcome": "evidence",
+  "judge": {
+   "answer_score": 2,
+   "citation_score": 2,
+   "faithful": true,
+   "unsupported_claims": [],
+   "failure_type": "none",
+   "rationale": "The assistant correctly identifies extension 4400 as the internal service desk number for reporting security incidents when email is unavailable, fully supported by the provided excerpt."
+  }
+ },
+ "Q32": {
+  "id": "Q32",
+  "answer": "Use the ServiceDesk category **NEW‑STARTER** for a missing or non‑working account on your first day, and the target first‑response time is **4 working hours**[onboarding#day-one].",
+  "citations": [
+   "onboarding#day-one"
+  ],
+  "invalid_citations": [],
+  "hits": [
+   {
+    "id": "onboarding#day-one",
+    "source_uri": "data/onboarding.md",
+    "rerank": 0.9390248
+   },
+   {
+    "id": "information_security#lost-devices-and-incidents",
+    "source_uri": "data/information_security.md",
+    "rerank": 0.004297939
+   },
+   {
+    "id": "sickness_absence#reporting",
+    "source_uri": "data/sickness_absence.md",
+    "rerank": 0.0038244836
+   },
+   {
+    "id": "annual_leave#how-to-request",
+    "source_uri": "data/annual_leave.md",
+    "rerank": 0.002396731
+   }
+  ],
+  "context": "<excerpt id=\"onboarding#day-one\" document=\"New starter onboarding\" doc_id=\"NS-ONBOARDING\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nNew starter onboarding > Day one\n\nYour line manager meets you at reception at 09:30 and introduces your buddy. IT issues your managed laptop and headset, sets up multi-factor authentication and tests your access. If an account is unavailable, raise a ServiceDesk ticket with category NEW-STARTER; the target first response is 4 working hours, not a guaranteed resolution time.\n</excerpt>\n\n<excerpt id=\"information_security#lost-devices-and-incidents\" document=\"Information security\" doc_id=\"NS-INFORMATION-SECURITY\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nInformation security > Lost devices and incidents\n\nReport a lost laptop, suspected phishing, accidental disclosure or unauthorised access to security@northstar-demo.example within 1 hour of discovery. If you cannot use company email, call the fictional internal service desk on extension 4400. Do not wait until the next working day. The security team coordinates containment; do not attempt your own remote wipe.\n</excerpt>\n\n<excerpt id=\"sickness_absence#reporting\" document=\"Sickness absence\" doc_id=\"NS-SICKNESS-ABSENCE\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nSickness absence > Reporting\n\nIf you cannot work because of illness, telephone your line manager by 10:00 on the first affected working day. If they are unavailable, email people@northstar-demo.example by the same deadline. Tell them your likely absence duration if known; you do not need to disclose your diagnosis to colleagues.\n</excerpt>\n\n<excerpt id=\"annual_leave#how-to-request\" document=\"Annual leave\" doc_id=\"NS-ANNUAL-LEAVE\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nAnnual leave > How to request\n\nSubmit requests in PeopleHub at least 10 working days before the first day of leave. Your line manager approves or declines within 3 working days. Do not treat a submitted request as approved. Requests for more than 10 consecutive working days also need approval from Priya Shah, Head of People.\n</excerpt>",
+  "latency_s": {
+   "retrieval": 1.0,
+   "generation": 6.98
+  },
+  "model": "openai/gpt-oss-120b",
+  "outcome": "evidence",
+  "judge": {
+   "answer_score": 1,
+   "citation_score": 2,
+   "faithful": true,
+   "unsupported_claims": [],
+   "failure_type": "generation",
+   "rationale": "The answer correctly identifies the category and response time with a valid citation, but it omits the critical clarification that the 4-hour target is not a guaranteed resolution time, making it incomplete compared to the reference."
+  }
+ },
+ "Q33": {
+  "id": "Q33",
+  "answer": "You must complete the **information security training** and the **code of conduct training** within the first 5 working days of starting [onboarding#first-week].",
+  "citations": [
+   "onboarding#first-week"
+  ],
+  "invalid_citations": [],
+  "hits": [
+   {
+    "id": "onboarding#first-week",
+    "source_uri": "data/onboarding.md",
+    "rerank": 0.96050966
+   },
+   {
+    "id": "onboarding#first-month",
+    "source_uri": "data/onboarding.md",
+    "rerank": 0.009783876
+   },
+   {
+    "id": "remote_work#eligibility",
+    "source_uri": "data/remote_work.md",
+    "rerank": 0.008187911
+   },
+   {
+    "id": "onboarding#before-day-one",
+    "source_uri": "data/onboarding.md",
+    "rerank": 0.0022343625
+   }
+  ],
+  "context": "<excerpt id=\"onboarding#first-week\" document=\"New starter onboarding\" doc_id=\"NS-ONBOARDING\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nNew starter onboarding > First week\n\nComplete information security and code of conduct training within 5 working days of starting. Your line manager agrees your first-month goals by the end of working day 5. Read the annual leave, sickness absence and expenses policies before making related requests or claims.\n</excerpt>\n\n<excerpt id=\"onboarding#first-month\" document=\"New starter onboarding\" doc_id=\"NS-ONBOARDING\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nNew starter onboarding > First month\n\nYour line manager holds a check-in at the end of weeks 1, 2 and 4. Permanent UK employees may request hybrid working after their first 4 weeks, subject to role suitability and written line-manager approval under the remote working policy. The company home-office allowance is not an automatic joining bonus.\n</excerpt>\n\n<excerpt id=\"remote_work#eligibility\" document=\"Remote and hybrid working\" doc_id=\"NS-REMOTE-WORK\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nRemote and hybrid working > Eligibility\n\nPermanent UK employees whose roles can be performed remotely may request hybrid working after completing their first 4 weeks. Hybrid arrangements require written line-manager approval. Contractors must use their engagement agreement; this policy does not grant them hybrid eligibility.\n</excerpt>\n\n<excerpt id=\"onboarding#before-day-one\" document=\"New starter onboarding\" doc_id=\"NS-ONBOARDING\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nNew starter onboarding > Before day one\n\nThe People team sends the contract and right-to-work checklist. Return the requested documents at least 5 working days before your start date. Do not email identity documents to a colleague; use the secure link supplied by the People team.\n</excerpt>",
+  "latency_s": {
+   "retrieval": 1.89,
+   "generation": 4.18
+  },
+  "model": "openai/gpt-oss-120b",
+  "outcome": "evidence",
+  "judge": {
+   "answer_score": 2,
+   "citation_score": 2,
+   "faithful": true,
+   "unsupported_claims": [],
+   "failure_type": "none",
+   "rationale": "The assistant correctly identified the required training (information security and code of conduct) and the deadline (5 working days) based on the provided excerpt. The citation is accurate and supports the claims."
+  }
+ },
+ "Q34": {
+  "id": "Q34",
+  "answer": "No. You should not email identity documents to a colleague; instead use the secure link provided by the People team [onboarding#before-day-one].",
+  "citations": [
+   "onboarding#before-day-one"
+  ],
+  "invalid_citations": [],
+  "hits": [
+   {
+    "id": "onboarding#before-day-one",
+    "source_uri": "data/onboarding.md",
+    "rerank": 0.08269734
+   },
+   {
+    "id": "onboarding#first-week",
+    "source_uri": "data/onboarding.md",
+    "rerank": 0.0022518474
+   }
+  ],
+  "context": "<excerpt id=\"onboarding#before-day-one\" document=\"New starter onboarding\" doc_id=\"NS-ONBOARDING\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nNew starter onboarding > Before day one\n\nThe People team sends the contract and right-to-work checklist. Return the requested documents at least 5 working days before your start date. Do not email identity documents to a colleague; use the secure link supplied by the People team.\n</excerpt>\n\n<excerpt id=\"onboarding#first-week\" document=\"New starter onboarding\" doc_id=\"NS-ONBOARDING\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nNew starter onboarding > First week\n\nComplete information security and code of conduct training within 5 working days of starting. Your line manager agrees your first-month goals by the end of working day 5. Read the annual leave, sickness absence and expenses policies before making related requests or claims.\n</excerpt>",
+  "latency_s": {
+   "retrieval": 4.92,
+   "generation": 1.92
+  },
+  "model": "openai/gpt-oss-120b",
+  "outcome": "evidence",
+  "judge": {
+   "answer_score": 1,
+   "citation_score": 2,
+   "faithful": true,
+   "unsupported_claims": [],
+   "failure_type": "generation",
+   "rationale": "The answer correctly identifies the prohibition on emailing identity documents and the requirement to use the secure link, but it omits the critical instruction to return requested documents at least 5 working days before the start date, making it incomplete."
+  }
+ },
+ "Q35": {
+  "id": "Q35",
+  "answer": "No. The £150 home‑office allowance is not an automatic joining bonus; you must request it and obtain written line‑manager approval before purchasing equipment and submitting a claim [onboarding#first-month][remote_work#equipment-and-expenses][expenses#home-office-purchases].",
+  "citations": [
+   "onboarding#first-month",
+   "remote_work#equipment-and-expenses",
+   "expenses#home-office-purchases"
+  ],
+  "invalid_citations": [],
+  "hits": [
+   {
+    "id": "onboarding#first-month",
+    "source_uri": "data/onboarding.md",
+    "rerank": 0.53500736
+   },
+   {
+    "id": "remote_work#equipment-and-expenses",
+    "source_uri": "data/remote_work.md",
+    "rerank": 0.43482125
+   },
+   {
+    "id": "expenses#home-office-purchases",
+    "source_uri": "data/expenses.md",
+    "rerank": 0.12304913
+   }
+  ],
+  "context": "<excerpt id=\"onboarding#first-month\" document=\"New starter onboarding\" doc_id=\"NS-ONBOARDING\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nNew starter onboarding > First month\n\nYour line manager holds a check-in at the end of weeks 1, 2 and 4. Permanent UK employees may request hybrid working after their first 4 weeks, subject to role suitability and written line-manager approval under the remote working policy. The company home-office allowance is not an automatic joining bonus.\n</excerpt>\n\n<excerpt id=\"remote_work#equipment-and-expenses\" document=\"Remote and hybrid working\" doc_id=\"NS-REMOTE-WORK\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nRemote and hybrid working > Equipment and expenses\n\nIT supplies a managed laptop and one headset. The annual home-office allowance is up to £150 per calendar year for an approved chair, keyboard or monitor. Obtain written line-manager approval before purchase and submit the claim under the expenses policy. Internet subscriptions, electricity and personal phone contracts are not reimbursed.\n</excerpt>\n\n<excerpt id=\"expenses#home-office-purchases\" document=\"Business expenses\" doc_id=\"NS-EXPENSES\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nBusiness expenses > Home-office purchases\n\nApply the eligibility, approval and £150 annual limit in the remote working policy before submitting a home-office claim. The £30 meal limit does not apply to home-office equipment. Purchases without the required advance approval are referred to Finance for review; payment is not guaranteed.\n</excerpt>",
+  "latency_s": {
+   "retrieval": 1.55,
+   "generation": 1.6
+  },
+  "model": "openai/gpt-oss-120b",
+  "outcome": "evidence",
+  "judge": {
+   "answer_score": 1,
+   "citation_score": 2,
+   "faithful": true,
+   "unsupported_claims": [],
+   "failure_type": "generation",
+   "rationale": "The answer correctly states the allowance is not automatic and requires approval, but it omits the critical detail that hybrid working (and thus the allowance) can only be requested after the first 4 weeks, which is a key part of the reference answer."
+  }
+ },
+ "Q36": {
+  "id": "Q36",
+  "answer": "The enhanced primary‑carer benefit allows an eligible primary carer to take **up to 26 weeks** of leave: **12 weeks are paid at full base pay**, followed by **14 weeks without company pay**[parental_leave#primary-carer-benefit].",
+  "citations": [
+   "parental_leave#primary-carer-benefit"
+  ],
+  "invalid_citations": [],
+  "hits": [
+   {
+    "id": "parental_leave#primary-carer-benefit",
+    "source_uri": "data/parental_leave.md",
+    "rerank": 0.9872773
+   },
+   {
+    "id": "parental_leave#partner-benefit",
+    "source_uri": "data/parental_leave.md",
+    "rerank": 0.6064984
+   },
+   {
+    "id": "parental_leave#scope-and-eligibility",
+    "source_uri": "data/parental_leave.md",
+    "rerank": 0.07978202
+   },
+   {
+    "id": "annual_leave#eligibility",
+    "source_uri": "data/annual_leave.md",
+    "rerank": 0.012100386
+   },
+   {
+    "id": "parental_leave#how-to-request",
+    "source_uri": "data/parental_leave.md",
+    "rerank": 0.0058199596
+   }
+  ],
+  "context": "<excerpt id=\"parental_leave#primary-carer-benefit\" document=\"Enhanced parental leave\" doc_id=\"NS-PARENTAL-LEAVE\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nEnhanced parental leave > Primary carer benefit\n\nAn eligible primary carer may take up to 26 weeks under this enhanced scheme: 12 weeks at full base pay followed by 14 weeks without company pay. Any statutory payment and interaction with this enhancement must be confirmed by the People team. This document does not specify statutory payment rates.\n</excerpt>\n\n<excerpt id=\"parental_leave#partner-benefit\" document=\"Enhanced parental leave\" doc_id=\"NS-PARENTAL-LEAVE\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nEnhanced parental leave > Partner benefit\n\nAn eligible partner may take 4 weeks at full base pay. Take the leave in one block within 6 months of birth or placement. Only one employee may use the primary carer benefit for the same child; the other may use the partner benefit if eligible.\n</excerpt>\n\n<excerpt id=\"parental_leave#scope-and-eligibility\" document=\"Enhanced parental leave\" doc_id=\"NS-PARENTAL-LEAVE\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nEnhanced parental leave > Scope and eligibility\n\nThis policy describes fictional enhanced company benefits for permanent UK employees with at least 26 weeks of continuous service by the expected week of birth or placement. Contractors are outside this policy. It does not provide a complete statement of statutory entitlements; ask the People team about statutory rights or eligibility outside this enhancement.\n</excerpt>\n\n<excerpt id=\"annual_leave#eligibility\" document=\"Annual leave\" doc_id=\"NS-ANNUAL-LEAVE\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nAnnual leave > Eligibility\n\nPermanent UK employees receive 25 days of paid annual leave per calendar year, plus England and Wales bank holidays. Part-time entitlement is pro-rated by contracted weekly hours. Contractors are outside this policy. The leave year runs from 1 January to 31 December.\n</excerpt>\n\n<excerpt id=\"parental_leave#how-to-request\" document=\"Enhanced parental leave\" doc_id=\"NS-PARENTAL-LEAVE\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nEnhanced parental leave > How to request\n\nNotify the People team at least 15 weeks before the expected birth date, or within 7 calendar days of receiving adoption placement notification. Provide the expected date and proposed leave dates. The People team confirms eligibility and the pay schedule in writing.\n</excerpt>",
+  "latency_s": {
+   "retrieval": 1.87,
+   "generation": 5.12
+  },
+  "model": "openai/gpt-oss-120b",
+  "outcome": "evidence",
+  "judge": {
+   "answer_score": 2,
+   "citation_score": 2,
+   "faithful": true,
+   "unsupported_claims": [],
+   "failure_type": "none",
+   "rationale": "The answer correctly states the duration (26 weeks) and pay structure (12 weeks paid, 14 weeks unpaid) based on the provided excerpt. It accurately reflects the policy content without inventing facts."
+  }
+ },
+ "Q37": {
+  "id": "Q37",
+  "answer": "No – only one employee can use the primary‑carer benefit for a given child; the other eligible partner may take the separate partner benefit instead[parental_leave#partner-benefit].",
+  "citations": [
+   "parental_leave#partner-benefit"
+  ],
+  "invalid_citations": [],
+  "hits": [
+   {
+    "id": "parental_leave#partner-benefit",
+    "source_uri": "data/parental_leave.md",
+    "rerank": 0.7126323
+   },
+   {
+    "id": "parental_leave#primary-carer-benefit",
+    "source_uri": "data/parental_leave.md",
+    "rerank": 0.025858777
+   },
+   {
+    "id": "parental_leave#support-and-return",
+    "source_uri": "data/parental_leave.md",
+    "rerank": 0.008412978
+   }
+  ],
+  "context": "<excerpt id=\"parental_leave#partner-benefit\" document=\"Enhanced parental leave\" doc_id=\"NS-PARENTAL-LEAVE\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nEnhanced parental leave > Partner benefit\n\nAn eligible partner may take 4 weeks at full base pay. Take the leave in one block within 6 months of birth or placement. Only one employee may use the primary carer benefit for the same child; the other may use the partner benefit if eligible.\n</excerpt>\n\n<excerpt id=\"parental_leave#primary-carer-benefit\" document=\"Enhanced parental leave\" doc_id=\"NS-PARENTAL-LEAVE\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nEnhanced parental leave > Primary carer benefit\n\nAn eligible primary carer may take up to 26 weeks under this enhanced scheme: 12 weeks at full base pay followed by 14 weeks without company pay. Any statutory payment and interaction with this enhancement must be confirmed by the People team. This document does not specify statutory payment rates.\n</excerpt>\n\n<excerpt id=\"parental_leave#support-and-return\" document=\"Enhanced parental leave\" doc_id=\"NS-PARENTAL-LEAVE\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nEnhanced parental leave > Support and return\n\nContact Priya Shah at people@northstar-demo.example for confidential planning. Discuss your return arrangements at least 4 weeks before returning. Requests for hybrid working are assessed under the remote working policy; parental leave approval does not automatically approve a remote working pattern.\n</excerpt>",
+  "latency_s": {
+   "retrieval": 4.3,
+   "generation": 0.71
+  },
+  "model": "openai/gpt-oss-120b",
+  "outcome": "evidence",
+  "judge": {
+   "answer_score": 2,
+   "citation_score": 2,
+   "faithful": true,
+   "unsupported_claims": [],
+   "failure_type": "none",
+   "rationale": "The assistant correctly identified that only one employee can use the primary carer benefit and that the other may use the partner benefit, citing the relevant excerpt that supports both claims."
+  }
+ },
+ "Q38": {
+  "id": "Q38",
+  "answer": "You must notify the People team **within 7 calendar days of receiving the adoption‑placement notification**[parental_leave#how-to-request].",
+  "citations": [
+   "parental_leave#how-to-request"
+  ],
+  "invalid_citations": [],
+  "hits": [
+   {
+    "id": "parental_leave#how-to-request",
+    "source_uri": "data/parental_leave.md",
+    "rerank": 0.99273914
+   },
+   {
+    "id": "onboarding#before-day-one",
+    "source_uri": "data/onboarding.md",
+    "rerank": 0.021532876
+   },
+   {
+    "id": "sickness_absence#return-to-work",
+    "source_uri": "data/sickness_absence.md",
+    "rerank": 0.018617803
+   },
+   {
+    "id": "parental_leave#scope-and-eligibility",
+    "source_uri": "data/parental_leave.md",
+    "rerank": 0.01784874
+   },
+   {
+    "id": "annual_leave#carry-over",
+    "source_uri": "data/annual_leave.md",
+    "rerank": 0.011597361
+   }
+  ],
+  "context": "<excerpt id=\"parental_leave#how-to-request\" document=\"Enhanced parental leave\" doc_id=\"NS-PARENTAL-LEAVE\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nEnhanced parental leave > How to request\n\nNotify the People team at least 15 weeks before the expected birth date, or within 7 calendar days of receiving adoption placement notification. Provide the expected date and proposed leave dates. The People team confirms eligibility and the pay schedule in writing.\n</excerpt>\n\n<excerpt id=\"onboarding#before-day-one\" document=\"New starter onboarding\" doc_id=\"NS-ONBOARDING\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nNew starter onboarding > Before day one\n\nThe People team sends the contract and right-to-work checklist. Return the requested documents at least 5 working days before your start date. Do not email identity documents to a colleague; use the secure link supplied by the People team.\n</excerpt>\n\n<excerpt id=\"sickness_absence#return-to-work\" document=\"Sickness absence\" doc_id=\"NS-SICKNESS-ABSENCE\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nSickness absence > Return to work\n\nYour line manager arranges a return-to-work conversation within 2 working days of your return. Discuss any support or temporary adjustments with the People team. Do not enter private medical details into a public team channel.\n</excerpt>\n\n<excerpt id=\"parental_leave#scope-and-eligibility\" document=\"Enhanced parental leave\" doc_id=\"NS-PARENTAL-LEAVE\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nEnhanced parental leave > Scope and eligibility\n\nThis policy describes fictional enhanced company benefits for permanent UK employees with at least 26 weeks of continuous service by the expected week of birth or placement. Contractors are outside this policy. It does not provide a complete statement of statutory entitlements; ask the People team about statutory rights or eligibility outside this enhancement.\n</excerpt>\n\n<excerpt id=\"annual_leave#carry-over\" document=\"Annual leave\" doc_id=\"NS-ANNUAL-LEAVE\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nAnnual leave > Carry-over\n\nUp to 5 unused days may be carried into the next calendar year with line-manager approval recorded by 15 December. Carried days must be used by 31 March. This demo policy does not describe statutory exceptions or individual contractual arrangements; refer those questions to the People team.\n</excerpt>",
+  "latency_s": {
+   "retrieval": 1.84,
+   "generation": 4.34
+  },
+  "model": "openai/gpt-oss-120b",
+  "outcome": "evidence",
+  "judge": {
+   "answer_score": 1,
+   "citation_score": 2,
+   "faithful": true,
+   "unsupported_claims": [],
+   "failure_type": "generation",
+   "rationale": "The answer correctly identifies the 7-day deadline and cites the right excerpt, but it omits the requirement to provide the expected date and proposed leave dates, making it incomplete compared to the reference."
+  }
+ },
+ "Q39": {
+  "id": "Q39",
+  "answer": "No. A hospitality event worth £70 exceeds the £50 threshold, so it cannot be accepted by simply recording it; it requires written approval from Compliance before you can accept it[code_of_conduct#gifts-and-hospitality].",
+  "citations": [
+   "code_of_conduct#gifts-and-hospitality"
+  ],
+  "invalid_citations": [],
+  "hits": [
+   {
+    "id": "code_of_conduct#gifts-and-hospitality",
+    "source_uri": "data/code_of_conduct.md",
+    "rerank": 0.7577944
+   }
+  ],
+  "context": "<excerpt id=\"code_of_conduct#gifts-and-hospitality\" document=\"Code of conduct\" doc_id=\"NS-CODE-OF-CONDUCT\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nCode of conduct > Gifts and hospitality\n\nA non-cash gift or hospitality worth up to and including £50 may be accepted only if it cannot reasonably influence a business decision. Record it in the Gifts Register within 5 working days. Anything above £50 requires written approval from Compliance before acceptance. Cash and gift cards must always be declined, regardless of value.\n</excerpt>",
+  "latency_s": {
+   "retrieval": 1.29,
+   "generation": 0.28
+  },
+  "model": "openai/gpt-oss-120b",
+  "outcome": "evidence",
+  "judge": {
+   "answer_score": 2,
+   "citation_score": 2,
+   "faithful": true,
+   "unsupported_claims": [],
+   "failure_type": "none",
+   "rationale": "The assistant correctly identified that the £70 dinner exceeds the £50 threshold and requires written approval from Compliance before acceptance, citing the relevant policy excerpt."
+  }
+ },
+ "Q40": {
+  "id": "Q40",
+  "answer": "No. The policy requires expense claims to be submitted within 30 calendar days of the purchase, not 60 days, and the meal limit is £30 —not £40. [expenses#eligibility-and-submission][expenses#home-office-purchases]",
+  "citations": [
+   "expenses#eligibility-and-submission",
+   "expenses#home-office-purchases"
+  ],
+  "invalid_citations": [],
+  "hits": [
+   {
+    "id": "expenses#home-office-purchases",
+    "source_uri": "data/expenses.md",
+    "rerank": 0.0057974015
+   },
+   {
+    "id": "expenses#eligibility-and-submission",
+    "source_uri": "data/expenses.md",
+    "rerank": 0.0032858334
+   }
+  ],
+  "context": "<excerpt id=\"expenses#home-office-purchases\" document=\"Business expenses\" doc_id=\"NS-EXPENSES\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nBusiness expenses > Home-office purchases\n\nApply the eligibility, approval and £150 annual limit in the remote working policy before submitting a home-office claim. The £30 meal limit does not apply to home-office equipment. Purchases without the required advance approval are referred to Finance for review; payment is not guaranteed.\n</excerpt>\n\n<excerpt id=\"expenses#eligibility-and-submission\" document=\"Business expenses\" doc_id=\"NS-EXPENSES\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nBusiness expenses > Eligibility and submission\n\nEmployees may claim reasonable, necessary business expenses through SpendTrack. Submit claims within 30 calendar days of the purchase date. Attach an itemised receipt and state the business purpose. A missing receipt requires written approval from Finance before submission; a bank statement alone is not an itemised receipt.\n</excerpt>",
+  "latency_s": {
+   "retrieval": 1.26,
+   "generation": 0.92
+  },
+  "model": "openai/gpt-oss-120b",
+  "outcome": "evidence",
+  "judge": {
+   "answer_score": 2,
+   "citation_score": 2,
+   "faithful": true,
+   "unsupported_claims": [],
+   "failure_type": "none",
+   "rationale": "The assistant correctly identified the outdated premise and provided the current rules (30 days, £30 limit) supported by the provided excerpts."
+  }
+ },
+ "Q41": {
+  "id": "Q41",
+  "answer": "Which matter do you need help with—onboarding, a security incident, a conduct concern, expense reimbursement, or parental‑leave planning? The appropriate contact depends on the topic.",
+  "citations": [],
+  "invalid_citations": [],
+  "hits": [
+   {
+    "id": "onboarding#contacts-and-scope",
+    "source_uri": "data/onboarding.md",
+    "rerank": 0.15052763
+   },
+   {
+    "id": "information_security#contact",
+    "source_uri": "data/information_security.md",
+    "rerank": 0.11656274
+   },
+   {
+    "id": "code_of_conduct#raising-concerns",
+    "source_uri": "data/code_of_conduct.md",
+    "rerank": 0.067423776
+   },
+   {
+    "id": "expenses#contact",
+    "source_uri": "data/expenses.md",
+    "rerank": 0.056236345
+   },
+   {
+    "id": "parental_leave#support-and-return",
+    "source_uri": "data/parental_leave.md",
+    "rerank": 0.02025469
+   }
+  ],
+  "context": "<excerpt id=\"onboarding#contacts-and-scope\" document=\"New starter onboarding\" doc_id=\"NS-ONBOARDING\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nNew starter onboarding > Contacts and scope\n\nFor onboarding questions contact people@northstar-demo.example. Use security@northstar-demo.example for suspected security incidents and the 1-hour reporting deadline in the information security policy. This document does not contain live account status, individual salaries or probation outcomes.\n</excerpt>\n\n<excerpt id=\"information_security#contact\" document=\"Information security\" doc_id=\"NS-INFORMATION-SECURITY\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nInformation security > Contact\n\nPolicy owner: Alex Morgan, Security Lead. Contact security@northstar-demo.example. Technical access problems without a suspected security incident follow the onboarding support route.\n</excerpt>\n\n<excerpt id=\"code_of_conduct#raising-concerns\" document=\"Code of conduct\" doc_id=\"NS-CODE-OF-CONDUCT\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nCode of conduct > Raising concerns\n\nReport conduct concerns to Priya Shah at people@northstar-demo.example. If the concern involves Priya, contact Alex Morgan at security@northstar-demo.example. Retaliation for raising a concern in good faith is prohibited. The policy does not promise that every report can remain anonymous.\n</excerpt>\n\n<excerpt id=\"expenses#contact\" document=\"Business expenses\" doc_id=\"NS-EXPENSES\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nBusiness expenses > Contact\n\nPolicy owner: Daniel Reed, Finance Operations Lead. Contact finance@northstar-demo.example. These are fictional company rules, not tax guidance.\n</excerpt>\n\n<excerpt id=\"parental_leave#support-and-return\" document=\"Enhanced parental leave\" doc_id=\"NS-PARENTAL-LEAVE\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nEnhanced parental leave > Support and return\n\nContact Priya Shah at people@northstar-demo.example for confidential planning. Discuss your return arrangements at least 4 weeks before returning. Requests for hybrid working are assessed under the remote working policy; parental leave approval does not automatically approve a remote working pattern.\n</excerpt>",
+  "latency_s": {
+   "retrieval": 2.03,
+   "generation": 4.01
+  },
+  "model": "openai/gpt-oss-120b",
+  "outcome": "evidence",
+  "judge": {
+   "answer_score": 2,
+   "citation_score": null,
+   "faithful": true,
+   "unsupported_claims": [],
+   "failure_type": "none",
+   "rationale": "The assistant correctly identified the ambiguity in the user's question and asked a clarifying question listing the specific topics (onboarding, security, conduct, expenses, parental leave) for which contacts are defined in the provided excerpts. This aligns perfectly with the reference answer's expectation to ask what the question is about."
+  }
+ },
+ "Q42": {
+  "id": "Q42",
+  "answer": "I can't find this in the HR policies available to you, so I can't answer it reliably. Please contact the People team at people@northstar-demo.example.",
+  "citations": [],
+  "invalid_citations": [],
+  "hits": [],
+  "context": "",
+  "latency_s": {
+   "retrieval": 2.35,
+   "generation": 0.0
+  },
+  "model": null,
+  "outcome": "below_threshold",
+  "judge": {
+   "answer_score": 2,
+   "citation_score": null,
+   "faithful": true,
+   "unsupported_claims": [],
+   "failure_type": "none",
+   "rationale": "The assistant correctly identified that the policy information was missing and refused to answer, directing the user to the People team as expected by the reference."
+  }
+ },
+ "Q43": {
+  "id": "Q43",
+  "answer": "I can't find this in the HR policies available to you, so I can't answer it reliably. Please contact the People team at people@northstar-demo.example.",
+  "citations": [],
+  "invalid_citations": [],
+  "hits": [],
+  "context": "",
+  "latency_s": {
+   "retrieval": 1.5,
+   "generation": 0.0
+  },
+  "model": null,
+  "outcome": "below_threshold",
+  "judge": {
+   "answer_score": 2,
+   "citation_score": null,
+   "faithful": true,
+   "unsupported_claims": [],
+   "failure_type": "none",
+   "rationale": "The assistant correctly refused to answer based on the lack of available excerpts and referred the user to the People team, aligning with the reference answer's requirement to deny access to salary bands for ordinary employees."
+  }
+ },
+ "Q44": {
+  "id": "Q44",
+  "answer": "Band 3’s salary range is £42,000 to £55,000 [pay_and_salary_bands#salary-bands].",
+  "citations": [
+   "pay_and_salary_bands#salary-bands"
+  ],
+  "invalid_citations": [],
+  "hits": [
+   {
+    "id": "pay_and_salary_bands#salary-bands",
+    "source_uri": "data/pay_and_salary_bands.md",
+    "rerank": 0.99411184
+   },
+   {
+    "id": "pay_and_salary_bands#starting-salaries",
+    "source_uri": "data/pay_and_salary_bands.md",
+    "rerank": 0.012194132
+   },
+   {
+    "id": "pay_and_salary_bands#confidentiality",
+    "source_uri": "data/pay_and_salary_bands.md",
+    "rerank": 0.007968815
+   }
+  ],
+  "context": "<excerpt id=\"pay_and_salary_bands#salary-bands\" document=\"Pay and salary bands\" doc_id=\"NS-PAY-BANDS\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nPay and salary bands > Salary bands\n\nNorthstar Studio uses five salary bands for permanent UK employees. Band 1 is £26,000 to £32,000. Band 2 is £32,000 to £42,000. Band 3 is £42,000 to £55,000. Band 4 is £55,000 to £72,000. Band 5 is £72,000 to £95,000. Contractors are outside the band structure.\n</excerpt>\n\n<excerpt id=\"pay_and_salary_bands#starting-salaries\" document=\"Pay and salary bands\" doc_id=\"NS-PAY-BANDS\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nPay and salary bands > Starting salaries\n\nOffer new starters a salary within the band for their role. An offer above the band midpoint requires written approval from Priya Shah, Head of People, before the offer is sent. An offer outside the band range requires approval from both Priya Shah and Daniel Reed, Finance Operations Lead.\n</excerpt>\n\n<excerpt id=\"pay_and_salary_bands#confidentiality\" document=\"Pay and salary bands\" doc_id=\"NS-PAY-BANDS\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nPay and salary bands > Confidentiality\n\nBand ranges and individual salaries are confidential People team records. Do not share band ranges with employees or line managers outside a formal offer or pay review. An employee may ask the People team for their own salary and band; refer all other salary questions to people@northstar-demo.example.\n</excerpt>",
+  "latency_s": {
+   "retrieval": 1.99,
+   "generation": 1.23
+  },
+  "model": "openai/gpt-oss-120b",
+  "outcome": "evidence",
+  "judge": {
+   "answer_score": 0,
+   "citation_score": 2,
+   "faithful": true,
+   "unsupported_claims": [],
+   "failure_type": "generation",
+   "rationale": "The assistant provided the correct salary range, but the policy excerpts explicitly state that band ranges are confidential and must not be shared with employees outside of a formal offer or pay review. The assistant failed to apply this confidentiality restriction, making the answer incorrect in this context."
+  }
+ },
+ "Q45": {
+  "id": "Q45",
+  "answer": "I can't find this in the HR policies available to you, so I can't answer it reliably. Please contact the People team at people@northstar-demo.example.",
+  "citations": [],
+  "invalid_citations": [],
+  "hits": [],
+  "context": "",
+  "latency_s": {
+   "retrieval": 1.43,
+   "generation": 0.0
+  },
+  "model": null,
+  "outcome": "check_retrieval",
+  "judge": {
+   "answer_score": 2,
+   "citation_score": null,
+   "faithful": true,
+   "unsupported_claims": [],
+   "failure_type": "none",
+   "rationale": "The assistant correctly refused to answer based on the lack of available excerpts and referred the user to the People team, aligning with the reference answer's expectation for an access-denied scenario."
+  }
+ },
+ "Q46": {
+  "id": "Q46",
+  "answer": "An offer of £50,000 for a Band 3 role is above the band midpoint, so it requires written approval from **Priya Shah, Head of People** before the offer is sent[pay_and_salary_bands#starting-salaries].",
+  "citations": [
+   "pay_and_salary_bands#starting-salaries"
+  ],
+  "invalid_citations": [],
+  "hits": [
+   {
+    "id": "pay_and_salary_bands#starting-salaries",
+    "source_uri": "data/pay_and_salary_bands.md",
+    "rerank": 0.4513265
+   },
+   {
+    "id": "pay_and_salary_bands#salary-bands",
+    "source_uri": "data/pay_and_salary_bands.md",
+    "rerank": 0.014172367
+   },
+   {
+    "id": "expenses#approval-and-payment",
+    "source_uri": "data/expenses.md",
+    "rerank": 0.012673736
+   },
+   {
+    "id": "code_of_conduct#gifts-and-hospitality",
+    "source_uri": "data/code_of_conduct.md",
+    "rerank": 0.00502115
+   }
+  ],
+  "context": "<excerpt id=\"pay_and_salary_bands#starting-salaries\" document=\"Pay and salary bands\" doc_id=\"NS-PAY-BANDS\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nPay and salary bands > Starting salaries\n\nOffer new starters a salary within the band for their role. An offer above the band midpoint requires written approval from Priya Shah, Head of People, before the offer is sent. An offer outside the band range requires approval from both Priya Shah and Daniel Reed, Finance Operations Lead.\n</excerpt>\n\n<excerpt id=\"pay_and_salary_bands#salary-bands\" document=\"Pay and salary bands\" doc_id=\"NS-PAY-BANDS\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nPay and salary bands > Salary bands\n\nNorthstar Studio uses five salary bands for permanent UK employees. Band 1 is £26,000 to £32,000. Band 2 is £32,000 to £42,000. Band 3 is £42,000 to £55,000. Band 4 is £55,000 to £72,000. Band 5 is £72,000 to £95,000. Contractors are outside the band structure.\n</excerpt>\n\n<excerpt id=\"expenses#approval-and-payment\" document=\"Business expenses\" doc_id=\"NS-EXPENSES\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nBusiness expenses > Approval and payment\n\nYour line manager approves claims up to and including £500. Claims above £500 also need Finance approval from Daniel Reed. Approved claims are paid in the next Friday payment run if Finance receives them by Tuesday at 12:00; later claims move to the following Friday. This policy cannot show whether an individual payment has been made.\n</excerpt>\n\n<excerpt id=\"code_of_conduct#gifts-and-hospitality\" document=\"Code of conduct\" doc_id=\"NS-CODE-OF-CONDUCT\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nCode of conduct > Gifts and hospitality\n\nA non-cash gift or hospitality worth up to and including £50 may be accepted only if it cannot reasonably influence a business decision. Record it in the Gifts Register within 5 working days. Anything above £50 requires written approval from Compliance before acceptance. Cash and gift cards must always be declined, regardless of value.\n</excerpt>",
+  "latency_s": {
+   "retrieval": 2.54,
+   "generation": 0.67
+  },
+  "model": "openai/gpt-oss-120b",
+  "outcome": "evidence",
+  "judge": {
+   "answer_score": 2,
+   "citation_score": 2,
+   "faithful": true,
+   "unsupported_claims": [],
+   "failure_type": "none",
+   "rationale": "The assistant correctly identified that £50,000 is above the Band 3 midpoint (calculated from the provided band range of £42,000–£55,000) and correctly cited the requirement for written approval from Priya Shah, Head of People."
+  }
+ },
+ "Q47": {
+  "id": "Q47",
+  "answer": "A first written warning remains active for **6 months**[disciplinary_procedure#outcomes].",
+  "citations": [
+   "disciplinary_procedure#outcomes"
+  ],
+  "invalid_citations": [],
+  "hits": [
+   {
+    "id": "disciplinary_procedure#outcomes",
+    "source_uri": "data/disciplinary_procedure.md",
+    "rerank": 0.99850464
+   },
+   {
+    "id": "disciplinary_procedure#scope-and-informal-stage",
+    "source_uri": "data/disciplinary_procedure.md",
+    "rerank": 0.009376237
+   },
+   {
+    "id": "disciplinary_procedure#disciplinary-hearing",
+    "source_uri": "data/disciplinary_procedure.md",
+    "rerank": 0.0027683855
+   }
+  ],
+  "context": "<excerpt id=\"disciplinary_procedure#outcomes\" document=\"Disciplinary procedure\" doc_id=\"NS-DISCIPLINARY\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nDisciplinary procedure > Outcomes\n\nPossible outcomes are no action, a first written warning, a final written warning or dismissal. A first written warning stays active for 6 months and a final written warning for 12 months. Gross misconduct may lead to dismissal without prior warnings; examples include harassment or retaliation under the code of conduct and deliberate disclosure of customer data under the information security policy.\n</excerpt>\n\n<excerpt id=\"disciplinary_procedure#scope-and-informal-stage\" document=\"Disciplinary procedure\" doc_id=\"NS-DISCIPLINARY\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nDisciplinary procedure > Scope and informal stage\n\nThis procedure guides line managers handling suspected misconduct by permanent UK employees. Contractors are managed under their engagement agreement. For minor first concerns, hold an informal conversation and record a summary in PeopleHub within 2 working days. An informal conversation is not a warning.\n</excerpt>\n\n<excerpt id=\"disciplinary_procedure#disciplinary-hearing\" document=\"Disciplinary procedure\" doc_id=\"NS-DISCIPLINARY\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nDisciplinary procedure > Disciplinary hearing\n\nGive the employee written notice of the hearing at least 3 working days in advance, including the allegations and the evidence. The employee may be accompanied by a work colleague or a trade union representative. A hearing may be rescheduled once, by up to 5 working days, if the companion is unavailable.\n</excerpt>",
+  "latency_s": {
+   "retrieval": 2.73,
+   "generation": 0.79
+  },
+  "model": "openai/gpt-oss-120b",
+  "outcome": "evidence",
+  "judge": {
+   "answer_score": 2,
+   "citation_score": 2,
+   "faithful": true,
+   "unsupported_claims": [],
+   "failure_type": "none",
+   "rationale": "The assistant correctly identified the 6-month duration for a first written warning and cited the relevant excerpt. Although the reference answer includes the duration for a final warning, the user only asked about the first warning, so the answer is complete and correct."
+  }
+ },
+ "Q48": {
+  "id": "Q48",
+  "answer": "No. The People team must appoint an investigator, and the investigator cannot be the employee’s line manager or a witness [disciplinary_procedure#investigation].",
+  "citations": [
+   "disciplinary_procedure#investigation"
+  ],
+  "invalid_citations": [],
+  "hits": [
+   {
+    "id": "disciplinary_procedure#investigation",
+    "source_uri": "data/disciplinary_procedure.md",
+    "rerank": 0.06176271
+   },
+   {
+    "id": "disciplinary_procedure#scope-and-informal-stage",
+    "source_uri": "data/disciplinary_procedure.md",
+    "rerank": 0.004166256
+   }
+  ],
+  "context": "<excerpt id=\"disciplinary_procedure#investigation\" document=\"Disciplinary procedure\" doc_id=\"NS-DISCIPLINARY\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nDisciplinary procedure > Investigation\n\nContact the People team before starting any formal action. The People team appoints an investigator within 5 working days. The investigator must not be the employee's line manager or a witness. The employee may be suspended on full base pay only with approval from Priya Shah, Head of People; suspension is not a disciplinary sanction.\n</excerpt>\n\n<excerpt id=\"disciplinary_procedure#scope-and-informal-stage\" document=\"Disciplinary procedure\" doc_id=\"NS-DISCIPLINARY\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nDisciplinary procedure > Scope and informal stage\n\nThis procedure guides line managers handling suspected misconduct by permanent UK employees. Contractors are managed under their engagement agreement. For minor first concerns, hold an informal conversation and record a summary in PeopleHub within 2 working days. An informal conversation is not a warning.\n</excerpt>",
+  "latency_s": {
+   "retrieval": 0.67,
+   "generation": 5.41
+  },
+  "model": "openai/gpt-oss-120b",
+  "outcome": "evidence",
+  "judge": {
+   "answer_score": 2,
+   "citation_score": 2,
+   "faithful": true,
+   "unsupported_claims": [],
+   "failure_type": "none",
+   "rationale": "The assistant correctly answered 'No' and cited the specific excerpt stating that the People team appoints the investigator and that the line manager is excluded from this role. The answer is complete, grounded, and properly cited."
+  }
+ },
+ "Q49": {
+  "id": "Q49",
+  "answer": "I can't find this in the HR policies available to you, so I can't answer it reliably. Please contact the People team at people@northstar-demo.example.",
+  "citations": [],
+  "invalid_citations": [],
+  "hits": [],
+  "context": "",
+  "latency_s": {
+   "retrieval": 3.16,
+   "generation": 0.0
+  },
+  "model": null,
+  "outcome": "below_threshold",
+  "judge": {
+   "answer_score": 2,
+   "citation_score": null,
+   "faithful": true,
+   "unsupported_claims": [],
+   "failure_type": "none",
+   "rationale": "The assistant correctly refused to answer based on the lack of available excerpts and referred the user to the People team, aligning with the reference answer's expectation for an access-denied scenario."
+  }
+ },
+ "Q50": {
+  "id": "Q50",
+  "answer": "The employee must submit a written appeal within **5 working days** of receiving the outcome letter [disciplinary_procedure#appeals].",
+  "citations": [
+   "disciplinary_procedure#appeals"
+  ],
+  "invalid_citations": [],
+  "hits": [
+   {
+    "id": "disciplinary_procedure#appeals",
+    "source_uri": "data/disciplinary_procedure.md",
+    "rerank": 0.9950563
+   },
+   {
+    "id": "disciplinary_procedure#outcomes",
+    "source_uri": "data/disciplinary_procedure.md",
+    "rerank": 0.1775255
+   },
+   {
+    "id": "disciplinary_procedure#disciplinary-hearing",
+    "source_uri": "data/disciplinary_procedure.md",
+    "rerank": 0.07369627
+   },
+   {
+    "id": "disciplinary_procedure#investigation",
+    "source_uri": "data/disciplinary_procedure.md",
+    "rerank": 0.020606475
+   },
+   {
+    "id": "disciplinary_procedure#scope-and-informal-stage",
+    "source_uri": "data/disciplinary_procedure.md",
+    "rerank": 0.005040703
+   }
+  ],
+  "context": "<excerpt id=\"disciplinary_procedure#appeals\" document=\"Disciplinary procedure\" doc_id=\"NS-DISCIPLINARY\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nDisciplinary procedure > Appeals\n\nThe employee may appeal in writing to people@northstar-demo.example within 5 working days of receiving the outcome letter. A manager who was not involved in the investigation or hearing hears the appeal. The appeal decision is final under this procedure.\n</excerpt>\n\n<excerpt id=\"disciplinary_procedure#outcomes\" document=\"Disciplinary procedure\" doc_id=\"NS-DISCIPLINARY\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nDisciplinary procedure > Outcomes\n\nPossible outcomes are no action, a first written warning, a final written warning or dismissal. A first written warning stays active for 6 months and a final written warning for 12 months. Gross misconduct may lead to dismissal without prior warnings; examples include harassment or retaliation under the code of conduct and deliberate disclosure of customer data under the information security policy.\n</excerpt>\n\n<excerpt id=\"disciplinary_procedure#disciplinary-hearing\" document=\"Disciplinary procedure\" doc_id=\"NS-DISCIPLINARY\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nDisciplinary procedure > Disciplinary hearing\n\nGive the employee written notice of the hearing at least 3 working days in advance, including the allegations and the evidence. The employee may be accompanied by a work colleague or a trade union representative. A hearing may be rescheduled once, by up to 5 working days, if the companion is unavailable.\n</excerpt>\n\n<excerpt id=\"disciplinary_procedure#investigation\" document=\"Disciplinary procedure\" doc_id=\"NS-DISCIPLINARY\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nDisciplinary procedure > Investigation\n\nContact the People team before starting any formal action. The People team appoints an investigator within 5 working days. The investigator must not be the employee's line manager or a witness. The employee may be suspended on full base pay only with approval from Priya Shah, Head of People; suspension is not a disciplinary sanction.\n</excerpt>\n\n<excerpt id=\"disciplinary_procedure#scope-and-informal-stage\" document=\"Disciplinary procedure\" doc_id=\"NS-DISCIPLINARY\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nDisciplinary procedure > Scope and informal stage\n\nThis procedure guides line managers handling suspected misconduct by permanent UK employees. Contractors are managed under their engagement agreement. For minor first concerns, hold an informal conversation and record a summary in PeopleHub within 2 working days. An informal conversation is not a warning.\n</excerpt>",
+  "latency_s": {
+   "retrieval": 2.2,
+   "generation": 0.35
+  },
+  "model": "openai/gpt-oss-120b",
+  "outcome": "evidence",
+  "judge": {
+   "answer_score": 1,
+   "citation_score": 2,
+   "faithful": true,
+   "unsupported_claims": [],
+   "failure_type": "generation",
+   "rationale": "The answer correctly identifies the 5-working-day timeframe and cites the correct excerpt, but it omits the required details about the appeal destination (people@northstar-demo.example) and the hearing manager, making it incomplete compared to the reference."
+  }
+ }
+}

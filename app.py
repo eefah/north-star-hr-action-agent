@@ -2,14 +2,14 @@
 
     streamlit run app.py
 """
-import re
 from datetime import date
 
 import pandas as pd
 import streamlit as st
 
 import config
-from rag import RAG, Answer
+from rag import CITATION_LIKE, RAG, Answer
+from retriever import OUTCOMES
 
 ROLE_SETS = {
     "Employee": ["employee"],
@@ -33,7 +33,7 @@ def get_rag() -> RAG:
 
 def render_answer_text(text: str) -> str:
     """Show citations as inline code so they stand out from the prose."""
-    return re.sub(r"\[([a-z0-9_]+#[a-z0-9-]+)\]", r"`\1`", text)
+    return CITATION_LIKE.sub(r"`\1`", text)
 
 
 def render_details(a: Answer, show_trace: bool):
@@ -47,13 +47,18 @@ def render_details(a: Answer, show_trace: bool):
                             f"v{h.meta['version']} · {h.meta['status']} · rerank {h.rerank_score:.3f} · {cited}")
                 st.caption(h.text.split("\n\n", 1)[-1])
     if show_trace and a.retrieval:
+        r = a.retrieval
         with st.expander("Retrieval trace"):
-            final = {h.id for h in a.hits}
+            st.markdown(f"**Query:** {r.query}  \n**Outcome:** `{r.outcome}`: {OUTCOMES[r.outcome]}  \n"
+                        f"**Rule:** best reranker score first, at most {r.final_k} chunks, "
+                        f"none below {r.min_rerank_score}. Scores rank chunks for this question; they are not probabilities.")
             st.dataframe(pd.DataFrame([{
-                "chunk": h.id, "to LLM": h.id in final, "dense rank": h.dense_rank, "BM25 rank": h.bm25_rank,
-                "RRF": round(h.rrf_score, 4), "rerank": round(h.rerank_score or 0, 3),
-            } for h in a.retrieval.candidates]), hide_index=True, width="stretch")
-            st.caption(f"Filter: `{a.retrieval.filter}`")
+                "chunk": h.id, "dense rank": h.dense_rank, "BM25 rank": h.bm25_rank,
+                "RRF": round(h.rrf_score, 4),
+                "rerank": None if h.rerank_score is None else round(h.rerank_score, 3),
+                "passed threshold": h.passed_threshold, "to LLM": h.sent, "reason": h.reason,
+            } for h in r.candidates]), hide_index=True, width="stretch")
+            st.caption(f"Filter: `{r.filter}`")
             st.caption(f"Latency: retrieval {a.latency_s['retrieval']} s · generation {a.latency_s['generation']} s"
                        + (f" · model {a.model}" if a.model else " · no LLM call (no evidence)"))
 
@@ -95,9 +100,10 @@ if not st.session_state.messages:
     st.write("Try one of these:")
     cols = st.columns(2)
     for i, example in enumerate(EXAMPLES):
-        if cols[i % 2].button(example, key=f"ex{i}", width="stretch"):
-            st.session_state.pending = example
-            st.rerun()
+        # A callback, not `if st.button(...)`: these buttons stay on screen after the first answer but are not
+        # redrawn on the next run, so a click checked in the script body would be lost.
+        cols[i % 2].button(example, key=f"ex{i}", width="stretch",
+                           on_click=lambda q=example: st.session_state.update(pending=q))
 
 question = st.chat_input("Ask about leave, expenses, remote work…") or st.session_state.pop("pending", None)
 if question:

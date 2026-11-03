@@ -69,7 +69,15 @@ def build_user_message(question: str, hits: list[Hit]) -> str:
     )
 
 
-CITATION = re.compile(r"\[([a-z0-9_]+#[a-z0-9-]+)\]")
+# Anything that looks like an attempted ID, e.g. [partner-benefit] with the document prefix missing (Q37).
+CITATION_LIKE = re.compile(r"\[\s*([a-z0-9_#-]*[_#-][a-z0-9_#-]*)\s*\]")
+INVISIBLE = re.compile(r"[\u200b-\u200d\u2060\ufeff]")  # zero-width characters, e.g. inside an ID (Q38)
+
+
+def parse_citations(text: str, allowed: set[str]) -> tuple[list[str], list[str]]:
+    """Split citation-like tokens into valid (retrieved) IDs and invalid ones, in order of appearance."""
+    cited = list(dict.fromkeys(CITATION_LIKE.findall(text)))
+    return [c for c in cited if c in allowed], [c for c in cited if c not in allowed]
 
 
 class RAG:
@@ -78,9 +86,10 @@ class RAG:
         self.llm = Groq()
 
     def answer(self, question: str, roles: list[str], as_of: date | None = None,
-               include_expired: bool = False, history: list[dict] | None = None) -> Answer:
+               include_expired: bool = False, history: list[dict] | None = None,
+               min_rerank_score: float = config.MIN_RERANK_SCORE) -> Answer:
         t0 = time.perf_counter()
-        retrieval = self.retriever.search(question, roles, as_of, include_expired)
+        retrieval = self.retriever.search(question, roles, as_of, include_expired, min_rerank_score=min_rerank_score)
         t1 = time.perf_counter()
 
         if not retrieval.hits:  # refusal gate: no evidence, no LLM call, no chance to invent an answer
@@ -102,10 +111,9 @@ class RAG:
 
         # Some models write citations with CJK lenticular brackets; normalise them to [id].
         text = response.choices[0].message.content.strip().replace("【", "[").replace("】", "]")
-        cited = list(dict.fromkeys(CITATION.findall(text)))
-        allowed = {h.id for h in retrieval.hits}
-        return Answer(question, roles, text, [c for c in cited if c in allowed], [c for c in cited if c not in allowed],
-                      retrieval.hits, config.LLM_MODEL,
+        text = INVISIBLE.sub("", text)
+        valid, invalid = parse_citations(text, {h.id for h in retrieval.hits})
+        return Answer(question, roles, text, valid, invalid, retrieval.hits, config.LLM_MODEL,
                       {"retrieval": round(t1 - t0, 2), "generation": round(t2 - t1, 2)}, user_message, retrieval)
 
 
@@ -119,7 +127,7 @@ def main():
 
     a = RAG().answer(args.question, args.roles.split(","), args.as_of, args.include_expired)
     print(a.text)
-    print(f"\nsources: {', '.join(h.id for h in a.hits) or 'none'}")
+    print(f"\nsources: {', '.join(h.id for h in a.hits) or 'none'}  (retrieval outcome: {a.retrieval.outcome})")
     if a.invalid_citations:
         print(f"WARNING invalid citations: {a.invalid_citations}")
     print(f"latency: {a.latency_s}")

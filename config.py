@@ -32,3 +32,6 @@ PEOPLE_CONTACT = "people@northstar-demo.example"
 # Recall@5 at 0.91 while 5 of 7 no-answer questions still retrieve nothing. Higher values cut
 # the second document from multi-document questions. Access control does not depend on this.
 MIN_RERANK_SCORE = 0.01
+# Experimental: keep a below-threshold chunk if dense and BM25 both ranked it this high or better
+# (targets outdated-premise questions such as Q40). 0 switches it off. See eval_retrieval.py --rescue.
+RESCUE_FIRST_STAGE_RANK = 0

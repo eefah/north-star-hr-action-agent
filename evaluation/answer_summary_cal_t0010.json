@@ -1,0 +1,85 @@
+{
+ "questions": 50,
+ "retrieval": {
+  "mean": 1.814,
+  "n": 43
+ },
+ "answer": {
+  "mean": 1.76,
+  "n": 50
+ },
+ "citation": {
+  "mean": 2.0,
+  "n": 41
+ },
+ "faithfulness": 1.0,
+ "answer_fully_correct": 0.78,
+ "forbidden_leaks": 0,
+ "latency_s": {
+  "median": 4.04,
+  "p90": 6.69,
+  "max": 8.51
+ },
+ "by_category": {
+  "direct": {
+   "n": 16,
+   "answer_mean": 1.81,
+   "faithful": 16
+  },
+  "multi-document": {
+   "n": 7,
+   "answer_mean": 1.57,
+   "faithful": 7
+  },
+  "outdated-premise": {
+   "n": 2,
+   "answer_mean": 0.5,
+   "faithful": 2
+  },
+  "ambiguous": {
+   "n": 2,
+   "answer_mean": 2.0,
+   "faithful": 2
+  },
+  "exception": {
+   "n": 10,
+   "answer_mean": 1.9,
+   "faithful": 10
+  },
+  "unanswerable-live-data": {
+   "n": 1,
+   "answer_mean": 2.0,
+   "faithful": 1
+  },
+  "unanswerable-missing-policy": {
+   "n": 2,
+   "answer_mean": 2.0,
+   "faithful": 2
+  },
+  "keyword": {
+   "n": 2,
+   "answer_mean": 2.0,
+   "faithful": 2
+  },
+  "access-denied": {
+   "n": 3,
+   "answer_mean": 2.0,
+   "faithful": 3
+  },
+  "access-allowed": {
+   "n": 5,
+   "answer_mean": 1.6,
+   "faithful": 5
+  }
+ },
+ "settings": {
+  "eval_date": "2026-10-18",
+  "generator": "openai/gpt-oss-120b",
+  "judge": "qwen/qwen3.8-27b",
+  "final_k": 5,
+  "candidates_k": 20,
+  "min_rerank_score": 0.01,
+  "rescue_first_stage_rank": 0,
+  "include_expired": false
+ }
+}
