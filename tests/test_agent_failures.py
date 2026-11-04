@@ -18,7 +18,8 @@ from pinecone.errors import PineconeTimeoutError, PineconeValueError, RateLimitE
 
 from agent import diagnostics, tools
 from agent.rules import APPROVER_ROLES, HEAD_OF_PEOPLE, LINE_MANAGER, RULES, EligibilityResult
-from agent.tools import ERROR_MESSAGES, EVIDENCE_QUERIES, Code, classify_error, run_tool
+from agent.tools import ERROR_MESSAGES, EVIDENCE_QUERIES, TECHNICAL_FAILURE_MESSAGE, Code, classify_error, \
+    run_tool
 from tests.fakes import FakeLLM, make_ctx
 
 FULL_TIME = {"employment_type": "permanent", "uk_based": True, "working_pattern": "full_time"}
@@ -103,8 +104,8 @@ class SafetyNetTests(unittest.TestCase):
                 r = run_tool(make_ctx()[0], name, args)
                 self.assertEqual((r.code, r.data["failure"]), (Code.TOOL_FAILURE, "internal"))
                 self.assertNotIn(r.code, {Code.NOT_ELIGIBLE, Code.PRECONDITION_FAILED, Code.INSUFFICIENT_EVIDENCE})
-                self.assertTrue(_approved(r.message))
-                self.assertIn(r.data["reference"], r.message)
+                self.assertEqual(r.message, TECHNICAL_FAILURE_MESSAGE)
+                self.assertNotIn(r.data["reference"], r.message)  # the reference stays in restricted data
 
     def test_unmapped_eligibility_reason_is_a_defect_not_a_guess(self):
         with mock.patch("agent.tools.check_eligibility", lambda *a: EligibilityResult("cannot_determine", "new")):

@@ -77,3 +77,20 @@ python eval_answers.py --ids Q06,Q21,Q40 --label stale_filtered
 python eval_answers.py --ids Q06,Q21,Q40 --include-expired --label stale_unfiltered
 python ingest.py          # restore the baseline index afterwards
 ```
+
+## Week 3: HR Policy Action Agent (supervised demo, synthetic data only)
+
+The agent (`agent/`) runs annual leave requests and policy questions as a LangGraph workflow: it checks
+eligibility and dates against verified policy text, prepares a draft, and saves it locally only after the
+synthetic employee approves that exact draft. Nothing is submitted to PeopleHub or sent to anyone.
+
+```bash
+pip install -r requirements.txt
+streamlit run agent_app.py                      # the demonstration interface
+python -m unittest discover tests               # offline tests (fake Pinecone and Groq)
+python -m unittest -v tests.live_evidence       # live checks against Pinecone and Groq (needs .env)
+python -m agent.demo --delete-all               # delete all demo checkpoints, drafts and logs
+```
+
+Demo data (checkpoints, approved drafts, diagnostic logs) is kept in `demo_data/`, which is Git-ignored and
+owner-only. This is a demonstration, not production-grade privacy compliance: use synthetic data only.

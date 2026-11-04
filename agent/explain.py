@@ -10,7 +10,7 @@ A refused draft (PRECONDITION_FAILED) is explained by the check that actually fa
 the approved ERROR_MESSAGES already set by the tools; no technical detail is added here.
 """
 from agent.rules import PEOPLE_TEAM, RULES
-from agent.tools import Code
+from agent.tools import TECHNICAL_FAILURE_MESSAGE, Code
 
 CAN_PROCEED = "can_proceed"
 CANNOT_PROCEED = "cannot_proceed"
@@ -33,6 +33,11 @@ CATEGORY = {
     Code.PRECONDITION_FAILED: CANNOT_DETERMINE,  # only when no underlying reason is available
 }
 NOT_A_DECISION = "This is not a decision about your leave."
+# Approved wording for the supervised demonstration (2026-11-04).
+INSUFFICIENT_EVIDENCE_MESSAGE = ("I couldn't find enough information in the available policy to confirm whether "
+                                 "your request meets the requirements. Please contact HR for clarification.")
+NO_EVIDENCE_MESSAGE = ("I couldn't find enough information in the available policy to answer this question. "
+                       "Please contact HR for clarification.")
 CONTACT = f"the People team at {PEOPLE_TEAM}"
 FIELD_NAMES = {"employment_type": "your employment type (permanent, contractor or other)",
                "uk_based": "whether you are based in the UK",
@@ -85,20 +90,20 @@ def explain(result: dict) -> dict:
                    f"them, so nothing has been decided. {NOT_A_DECISION}")
         recovery = "Start a new request and include these details."
     elif code == Code.INSUFFICIENT_EVIDENCE:
-        message = (f"The agent couldn't confirm the current policy wording it needs, so it hasn't made a decision. "
-                   f"{NOT_A_DECISION} Please contact {CONTACT}.")
-        recovery = f"Contact {CONTACT}."
+        message = INSUFFICIENT_EVIDENCE_MESSAGE
+        recovery = f"Contact HR: {CONTACT}."
     elif code == Code.NO_EVIDENCE:
-        message = (f"None of the policies available to you cover this, so the agent can't answer it. "
-                   f"Please contact {CONTACT}.")
-        recovery = f"Contact {CONTACT}, or rephrase the question."
+        message = NO_EVIDENCE_MESSAGE
+        recovery = f"Contact HR: {CONTACT}, or rephrase the question."
     elif code == Code.INVALID_CITATIONS:
         message = r["message"]  # the answer itself is withheld by the tool
         recovery = f"Rephrase the question or contact {CONTACT}."
     elif code == Code.TOOL_FAILURE:
-        message = r["message"]  # one of the approved ERROR_MESSAGES
+        message = TECHNICAL_FAILURE_MESSAGE  # approved wording; never the underlying error
         retryable = bool(data.get("retryable"))
-        recovery = "Try again in a few minutes." if retryable else f"Contact {CONTACT}."
+        ref = data.get("reference")
+        recovery = "Try again in a few minutes." if retryable else \
+            f"If it keeps happening, contact HR: {CONTACT}" + (f", quoting reference {ref}." if ref else ".")
     elif code in (Code.INVALID_ARGUMENTS, Code.UNKNOWN_TOOL, Code.PRECONDITION_FAILED):
         message = ("Some of the details weren't in a form the agent can use, so nothing has been decided. "
                    f"{NOT_A_DECISION}")

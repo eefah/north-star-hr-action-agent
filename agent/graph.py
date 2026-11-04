@@ -145,7 +145,8 @@ def _safe(name: str):
                 diagnostics.record(ref, "internal", e, tool=f"graph:{name}")
                 outcome = {"category": CANNOT_DETERMINE, "code": Code.TOOL_FAILURE.value, "citations": [],
                            "message": ERROR_MESSAGES["unavailable"].format(people_team=PEOPLE_TEAM, ref=ref),
-                           "recovery": f"Contact the People team at {PEOPLE_TEAM}.", "retryable": False}
+                           "recovery": f"If it keeps happening, contact HR: the People team at {PEOPLE_TEAM}, "
+                                       f"quoting reference {ref}.", "retryable": False}
                 return {"outcome": outcome, "status": UNDETERMINED, "route": "finish",
                         "trace": [{"step": name, "code": Code.TOOL_FAILURE.value, "failure": "internal",
                                    "errors": [f"internal {type(e).__name__} (diagnostic ref {ref})"]}]}

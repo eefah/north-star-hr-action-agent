@@ -18,7 +18,8 @@ from langgraph.checkpoint.sqlite import SqliteSaver
 from pinecone.errors import PineconeTimeoutError, ResponseParsingError, UnauthorizedError
 
 from agent import graph as G
-from agent.explain import CAN_PROCEED, CANNOT_DETERMINE, CANNOT_PROCEED, NOT_A_DECISION
+from agent.explain import CAN_PROCEED, CANNOT_DETERMINE, CANNOT_PROCEED, INSUFFICIENT_EVIDENCE_MESSAGE, \
+    NOT_A_DECISION
 from agent.rules import HEAD_OF_PEOPLE, LINE_MANAGER, RULES
 from agent.tools import ERROR_MESSAGES
 from tests.fakes import FakeLLM, make_ctx, make_retriever, without_chunk
@@ -126,6 +127,8 @@ class SuccessfulJourneyTests(GraphTestCase):
         self.assertEqual((v["status"], v["category"], v["citations"]), (G.ANSWERED, CAN_PROCEED,
                                                                         ["annual_leave#eligibility"]))
         self.assertIn("25 days", v["message"])
+        refs = self.state()["evidence_refs"]
+        self.assertEqual([(r["chunk_id"], r["doc_id"]) for r in refs], [("annual_leave#eligibility", "NS-ANNUAL-LEAVE")])
 
 
 # ---------------------------------------------------------------- AC4: three distinct, explained outcomes
@@ -162,7 +165,10 @@ class ExplainabilityTests(GraphTestCase):
                 v = self.start(request, **kwargs)
                 self.assertEqual((v["status"], v["category"], v["reason"]), (G.UNDETERMINED, CANNOT_DETERMINE,
                                                                              reason))
-                self.assertIn(NOT_A_DECISION, v["message"])
+                if reason == "INSUFFICIENT_EVIDENCE":
+                    self.assertEqual(v["message"], INSUFFICIENT_EVIDENCE_MESSAGE)  # approved wording
+                else:
+                    self.assertIn(NOT_A_DECISION, v["message"])
                 for wording in ("can't go ahead", "not eligible", "ineligible", "outside this policy"):
                     self.assertNotIn(wording, v["message"].lower())
                 self.assertIn("people@northstar-demo.example", v["recovery"])
@@ -175,7 +181,8 @@ class ExplainabilityTests(GraphTestCase):
         v = self.resume({"retry": False})
         self.assertEqual((v["status"], v["category"], v["reason"]), (G.UNDETERMINED, CANNOT_DETERMINE,
                                                                      "TOOL_FAILURE"))
-        self.assertEqual(v["message"], ERROR_MESSAGES["transient"])
+        self.assertEqual(v["message"], "Something went wrong while checking your request. No action has been "
+                                       "taken. Please try again later.")
         self.assertEqual(v["recovery"], "Try again in a few minutes.")
         self.assertNothingApproved()
 

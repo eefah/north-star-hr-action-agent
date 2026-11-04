@@ -99,14 +99,11 @@ DRAFT_STATUS_TEXT = ("Draft prepared by the HR Policy Action Agent. It has NOT b
 MAX_TEXT = 500
 MAX_NOTE = 300
 
-# The only failure wording an employee sees. Draft wording, pending approval.
-ERROR_MESSAGES = {
-    "transient": ("We couldn't reach the HR policy service just now, so nothing has been decided about your "
-                  "request. Please try again in a few minutes."),
-    "unavailable": ("The HR policy assistant can't complete this right now, so nothing has been decided about "
-                    "your request. This is not a decision about your leave. Please try again later, or contact "
-                    "the People team at {people_team} and quote reference {ref}."),
-}
+# The only failure wording an employee sees (approved for the supervised demonstration, 2026-11-04).
+# The diagnostic reference is kept in result data, never in this text.
+TECHNICAL_FAILURE_MESSAGE = ("Something went wrong while checking your request. No action has been taken. "
+                             "Please try again later.")
+ERROR_MESSAGES = {"transient": TECHNICAL_FAILURE_MESSAGE, "unavailable": TECHNICAL_FAILURE_MESSAGE}
 
 
 @dataclass
@@ -248,6 +245,9 @@ def answer_policy(ctx: ToolContext, question: str) -> ToolResult:
             ctx, "answer_policy", lambda: ctx.rag.answer(question, list(ctx.roles), ctx.policy_date))
     except _Failed as f:
         return _failure("answer_policy", f)
+    for h in a.hits:  # the passages the answer was built from become evidence, like search_policy
+        if _authorised(ctx, h.meta):
+            ctx.evidence.add(h.meta)
     data = {"question": question, "sources": [h.id for h in a.hits],
             "invalid_citations": a.invalid_citations,
             "outcome": a.retrieval.outcome if a.retrieval else None}
