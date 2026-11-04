@@ -1,0 +1,108 @@
+{
+ "source": "https://www.gov.uk/bank-holidays.json",
+ "division": "england-and-wales",
+ "retrieved": "2026-11-03",
+ "covers_years": [
+  2026,
+  2028
+ ],
+ "note": "Reference data, not HR policy. The annual leave policy grants England and Wales bank holidays but does not list them.",
+ "events": [
+  {
+   "date": "2026-01-01",
+   "title": "New Year's Day"
+  },
+  {
+   "date": "2026-04-03",
+   "title": "Good Friday"
+  },
+  {
+   "date": "2026-04-06",
+   "title": "Easter Monday"
+  },
+  {
+   "date": "2026-05-04",
+   "title": "Early May bank holiday"
+  },
+  {
+   "date": "2026-05-25",
+   "title": "Spring bank holiday"
+  },
+  {
+   "date": "2026-08-31",
+   "title": "Summer bank holiday"
+  },
+  {
+   "date": "2026-12-25",
+   "title": "Christmas Day"
+  },
+  {
+   "date": "2026-12-28",
+   "title": "Boxing Day"
+  },
+  {
+   "date": "2027-01-01",
+   "title": "New Year's Day"
+  },
+  {
+   "date": "2027-03-26",
+   "title": "Good Friday"
+  },
+  {
+   "date": "2027-03-29",
+   "title": "Easter Monday"
+  },
+  {
+   "date": "2027-05-03",
+   "title": "Early May bank holiday"
+  },
+  {
+   "date": "2027-05-31",
+   "title": "Spring bank holiday"
+  },
+  {
+   "date": "2027-08-30",
+   "title": "Summer bank holiday"
+  },
+  {
+   "date": "2027-12-27",
+   "title": "Christmas Day"
+  },
+  {
+   "date": "2027-12-28",
+   "title": "Boxing Day"
+  },
+  {
+   "date": "2028-01-03",
+   "title": "New Year's Day"
+  },
+  {
+   "date": "2028-04-14",
+   "title": "Good Friday"
+  },
+  {
+   "date": "2028-04-17",
+   "title": "Easter Monday"
+  },
+  {
+   "date": "2028-05-01",
+   "title": "Early May bank holiday"
+  },
+  {
+   "date": "2028-05-29",
+   "title": "Spring bank holiday"
+  },
+  {
+   "date": "2028-08-28",
+   "title": "Summer bank holiday"
+  },
+  {
+   "date": "2028-12-25",
+   "title": "Christmas Day"
+  },
+  {
+   "date": "2028-12-26",
+   "title": "Boxing Day"
+  }
+ ]
+}

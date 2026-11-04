@@ -6,3 +6,4 @@ __pycache__/
 RAG_Printable_Pack.pdf
 *.mov
 drafts/
+logs/
