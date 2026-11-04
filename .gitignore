@@ -7,3 +7,7 @@ RAG_Printable_Pack.pdf
 *.mov
 drafts/
 logs/
+demo_data/
+*.sqlite
+*.sqlite-*
+*.db
