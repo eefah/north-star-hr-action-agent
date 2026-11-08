@@ -36,8 +36,13 @@ def workflow_app():
     return G.build_graph(checkpointer), conn
 
 
+def agent_today() -> date:
+    """The date the agent treats as today. The sidebar shows this same value, so the two can't disagree."""
+    return st.session_state.get("demo_date") or date.today()
+
+
 def ctx():
-    return demo.graph_context(services(), st.session_state.get("demo_date") or date.today())
+    return demo.graph_context(services(), agent_today())
 
 
 def state_of(app, thread_id):
@@ -65,6 +70,10 @@ def sidebar():
         st.date_input("Request date (demo)", value=date.today(), key="demo_date", format="DD/MM/YYYY",
                       help="The date the agent treats as today. Change it to show the notice rule being "
                            "re-checked when a draft is approved on a later day.")
+        today = agent_today()
+        st.markdown(f"The agent is treating today as: **{today:%d/%m/%Y}**")
+        if today != date.today():
+            st.caption("This is not today's real date.")
         if st.button("New request", key="new_request", width="stretch"):
             st.session_state.pop("thread", None)
             st.rerun()

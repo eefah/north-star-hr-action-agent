@@ -136,6 +136,16 @@ class JourneyTests(AppTestCase):
         self.assertIn("Draft for your review", page_text(at))
 
 
+class DemoDateTests(AppTestCase):
+    def test_sidebar_shows_the_date_the_agent_uses(self):
+        self.services(fake_services())
+        at = self.app()  # demo date set to TODAY (03/11/2026)
+        self.assertIn("The agent is treating today as: **03/11/2026**", page_text(at))
+        self.assertIn("This is not today's real date.", page_text(at))
+        at = self.submit_leave(at)  # the draft records the same date
+        self.assertIn("prepared on 2026-11-03", page_text(at))
+
+
 class FailureTests(AppTestCase):
     def test_temporary_fault_offers_retry_then_stops_cleanly(self):
         self.services(fake_services(fail_times=99))
